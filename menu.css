@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-color: #000;
+  background-repeat: no-repeat; /* Zabrání opakování */
+  background-size: cover; /* Přizpůsobí obrázek tak, aby pokryl celou plochu */
+  background-position: center;
+  height: 100vh;
+  padding: 32px;
+}
+
+#container {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  z-index: 2;
+  border-radius: 50px;
+  position: relative;
+}
+
+#top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navwrapper {
+  position: relative;
+  top: -25px;
+  right: -25px;
+  width: 60%;
+  height: 100px;
+
+  z-index: 3;
+  background-color: #000;
+
+  padding: 16px 64px;
+  border-radius: 0 0 0 15px;
+}
+
+#navwrapper::after {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  border-radius: 0 15px 0 0;
+  box-shadow: 4.4px -4.5px rgb(0, 0, 0);
+
+  left: -20px;
+  height: 20px;
+  width: 20px;
+}
+
+#navwrapper::before {
+  content: "";
+  position: absolute;
+
+  border-radius: 0 15px 0 0;
+  box-shadow: 4.4px -4.5px rgb(0, 0, 0);
+
+  right: 3px;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+}
+
+#navwrapper nav {
+  display: flex;
+  height: 100%;
+}
+#navwrapper nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  gap: 64px;
+}
+#navwrapper nav ul li {
+  list-style: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 225px;
+  background-color: aqua;
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+#logo {
+  font-family: "Funnel Display", sans-serif;
+  color: lawngreen;
+  font-size: 3rem;
+  margin-left: 24px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
