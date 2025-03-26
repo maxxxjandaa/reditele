@@ -1,0 +1,244 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #111111;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+#sidebar {
+  width: 10%;
+  min-width: 256px;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding-top: 24px;
+  height: 100vh;
+}
+
+#main {
+  width: 90%;
+  height: 100vh;
+}
+
+#logo {
+  font-family: "Funnel Display", sans-serif;
+  color: lawngreen;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#mainContent {
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  margin: 0 24px 24px 0;
+  height: calc(100vh - 80px);
+  padding: 24px;
+  overflow-y: scroll;
+}
+
+.item {
+  height: 40px;
+  border-top: 1px solid #111111;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.name {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.content {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.date {
+  position: absolute;
+  right: 0;
+  color: #fff;
+}
+
+#info {
+  position: absolute;
+  bottom: -420px;
+  right: 0;
+  background-color: #fafafa;
+  height: 500px;
+  width: 400px;
+  border-radius: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 10;
+  cursor: pointer;
+  padding: 24px;
+}
+
+#info.active {
+  bottom: 0;
+}
+
+#info h1 {
+  text-align: center;
+  color: #2b2b2b;
+}
+
+#info span {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.spItem {
+  display: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.spItem:hover {
+  background-color: #cc0606;
+}
+
+.spItem label {
+  cursor: pointer;
+}
+
+#new {
+  background-color: lightgreen;
+  border-radius: 255px;
+  padding: 5px 16px;
+  font-size: 0.8rem;
+}
+
+#itemSp {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.window {
+  width: 800px;
+  height: 800px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  top: 100px;
+  left: 100px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.window h1,
+.window p,
+.window h2 {
+  color: #2b2b2b;
+}
+.header {
+  width: 100%;
+  height: 30px;
+  background: #fafafa;
+  padding: 0 16px;
+  cursor: grab;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header span {
+  color: #2b2b2b;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+#editables {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  cursor: auto;
+  width: 20%;
+
+  height: 100%;
+}
+
+#editables img {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.window .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#from,
+#predmet {
+  color: #2b2b2b;
+  margin: 8px 0;
+}
+
+#mesage {
+  margin-top: 24px;
+}
+
+strong {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#wrapp {
+  display: flex;
+}
+
+.window .activeWin {
+  display: flex;
+}
+
+.content {
+  padding: 10px;
+}
+
+#cardWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#infoCardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#infoCardWrapper div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#visa {
+  border-radius: 10px;
+  width: 200px;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
