@@ -25,14 +25,57 @@
       <div id="appsColumn">
         <div class="container">
           <a href="email.html">
-            <button id="email"><img src="/assets/mail.png" alt="" /></button>
+            <button id="emailIcon">
+              <img src="/assets/mail.png" alt="" />
+            </button>
           </a>
           <span>Email</span>
+        </div>
+      </div>
+      <div id="timeline">
+        <h2>Status</h2>
+        <div class="levels">
+          <h5 id="levelOne">Level 1</h5>
+          <img src="/assets/mark.png" alt="" />
+        </div>
+        <div class="pipe"></div>
+        <div class="levels">
+          <h5 id="levelTwo">Level 2</h5>
+          <!-- <img  src="/assets/mark.png" alt="" /> -->
+        </div>
+        <div class="pipe"></div>
+        <div class="levels">
+          <h5 id="levelThree">Level 3</h5>
+          <!-- <img src="/assets/mark.png" alt="" /> -->
+        </div>
+      </div>
+      <div id="info">
+        <h1>Vaše údaje</h1>
+        <hr />
+        <span id="name"></span>
+        <span id="surname"></span>
+        <span id="email"></span>
+        <span id="password"></span>
+        <hr />
+        <div id="cardWrapper">
+          <img id="visa" src="/assets/visa.jpg" alt="" />
+          <div id="infoCardWrapper">
+            <div>
+              <span>Obnos:</span>
+              <span class="small" id="Obnos">100 000 Kč</span>
+            </div>
+            <div>
+              <span>Číslo účtu:</span>
+              <span class="small" id="cislo_uctu"></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div id="navbar">
       <img src="/assets/taskbar.png" alt="" />
     </div>
+    <script src="desktop.js"></script>
+    <script src="fill.js"></script>
   </body>
 </html>

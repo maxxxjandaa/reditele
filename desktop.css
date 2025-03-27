@@ -68,4 +68,106 @@ button {
 #navbar img {
   width: 100%;
   height: 100%;
+  background-position: center; /* Obrázek bude vycentrovaný */
+  background-size: cover;
+}
+
+#timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 32px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.pipe {
+  height: 50px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#timeline img {
+  height: 16px;
+  width: 16px;
+}
+
+#timeline .levels {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#timeline h5 {
+  font-size: 1.25rem;
+  color: #fafafa;
+}
+
+#timeline h2 {
+  font-size: 1.5rem;
+  color: #fafafa;
+  margin-bottom: 32px;
+}
+
+#info {
+  position: absolute;
+  bottom: 200px;
+  right: 50px;
+  background-color: #fafafa;
+  height: 500px;
+  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 10;
+  cursor: pointer;
+  padding: 24px;
+}
+
+#info.active {
+  bottom: 0;
+}
+
+#info h1 {
+  text-align: center;
+  color: #2b2b2b;
+}
+
+#info span {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+#cardWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#infoCardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#infoCardWrapper div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#visa {
+  border-radius: 10px;
+  width: 200px;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
 }
