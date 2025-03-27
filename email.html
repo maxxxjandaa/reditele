@@ -14,6 +14,13 @@
     />
   </head>
   <body>
+    <div id="topCancel">
+      .
+      <span>Email</span>
+      <a href="desktop.html"
+        ><img id="close" src="/assets/whiteClose.svg" alt=""
+      /></a>
+    </div>
     <div id="info">
       <h1>Vaše údaje</h1>
       <hr />
@@ -36,632 +43,648 @@
         </div>
       </div>
     </div>
-    <div id="sidebar">
-      <h1 id="logo">Cyber</h1>
-      <img src="/assets/Snímek obrazovky 2025-03-26 174736.png" alt="" />
-      <div id="timeline">
-        <h2>Status</h2>
-        <div class="levels">
-          <h5 id="levelOne">Level 1</h5>
-          <img src="/assets/mark.png" alt="" />
-        </div>
-        <div class="pipe"></div>
-        <div class="levels">
-          <h5 id="levelTwo">Level 2</h5>
-          <!-- <img  src="/assets/mark.png" alt="" /> -->
-        </div>
-        <div class="pipe"></div>
-        <div class="levels">
-          <h5 id="levelThree">Level 3</h5>
-          <!-- <img src="/assets/mark.png" alt="" /> -->
+    <div id="mainWrapper">
+      <div id="sidebar">
+        <h1 id="logo">Cyber</h1>
+        <img src="/assets/Snímek obrazovky 2025-03-26 174736.png" alt="" />
+        <div id="timeline">
+          <h2>Status</h2>
+          <div class="levels">
+            <h5 id="levelOne">Level 1</h5>
+            <img src="/assets/mark.png" alt="" />
+          </div>
+          <div class="pipe"></div>
+          <div class="levels">
+            <h5 id="levelTwo">Level 2</h5>
+            <!-- <img  src="/assets/mark.png" alt="" /> -->
+          </div>
+          <div class="pipe"></div>
+          <div class="levels">
+            <h5 id="levelThree">Level 3</h5>
+            <!-- <img src="/assets/mark.png" alt="" /> -->
+          </div>
         </div>
       </div>
-    </div>
-    <div id="main">
-      <div class="window" id="draggableWindow">
-        <div id="wrapp">
-          <div class="header" id="dragHeader">
-            <span> Nová zpráva</span>
-            <div id="editables">
-              <img id="close" src="/assets/icons8-close.svg" alt="" />
+      <div id="main">
+        <div class="window" id="draggableWindow">
+          <div id="wrapp">
+            <div class="header" id="dragHeader">
+              <span> Nová zpráva</span>
+              <div id="editables">
+                <img id="close" src="/assets/icons8-close.svg" alt="" />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="content">
-          <div id="headerContent">
-            <span id="from">Od: petrnovak@seznam.cz</span>
-            <button>Nahlásit</button>
+          <div class="content">
+            <div id="headerContent">
+              <span id="from">Od: petrnovak@seznam.cz</span>
+              <button>Nahlásit</button>
+            </div>
+
+            <hr />
+            <span id="predmet">Předmět: Nová nabídka od dodavatele</span>
+            <hr />
+            <p id="mesage">
+              Dobrý den,<br /><br />
+              narazil jsem na něco, co by vás mohlo zajímat. V dnešní době, kdy
+              se neustále mění trendy a technologie, je důležité mít přístup k
+              těm nejlepším informacím.<br /><br />
+              A právě na to jsem narazil! Možná jste už slyšeli o této stránce,
+              která přináší spoustu užitečných informací. Ať už vás zajímají
+              inovace, podnikání nebo jen hledáte inspiraci, tady rozhodně
+              najdete něco, co vás posune dál. Osobně mě zaujalo, jak přehledně
+              je celý web zpracován a jak snadné je najít přesně to, co
+              potřebujete.<br /><br />
+              <strong>https://www.cyber.cz</strong><br /><br />
+              V dnešní době, kdy jsme všichni zahlceni obsahem, je příjemné
+              narazit na něco, co opravdu dává smysl. Myslím, že by stálo za to
+              se na to podívat a zjistit, jestli vás to osloví stejně jako mě.
+              Jestli budete mít chvíli času, dejte mi vědět, co si o tom
+              myslíte. Rád si poslechnu váš názor!<br /><br />
+              Mějte se hezky a ať se vám daří,<br /><br />
+              Petr Novák
+            </p>
+          </div>
+        </div>
+        <img src="/assets/Snímek obrazovky 2025-03-26 175050.png" alt="" />
+        <div id="mainContent">
+          <div class="item | spItem" id="itemSp">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová nabídka od dodavatele</label
+            >
+            <p class="content">
+              Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
+            </p>
+            <div id="new">Nový</div>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová nabídka od dodavatele</label
+            >
+            <p class="content">
+              Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Vaše objednávka byla odeslána</label
+            >
+            <p class="content">
+              Zásilka byla odeslána a očekáváme doručení do 3 pracovních dnů.
+            </p>
+            <span class="date"></span>
           </div>
 
-          <hr />
-          <span id="predmet">Předmět: Nová nabídka od dodavatele</span>
-          <hr />
-          <p id="mesage">
-            Dobrý den,<br /><br />
-            narazil jsem na něco, co by vás mohlo zajímat. V dnešní době, kdy se
-            neustále mění trendy a technologie, je důležité mít přístup k těm
-            nejlepším informacím.<br /><br />
-            A právě na to jsem narazil! Možná jste už slyšeli o této stránce,
-            která přináší spoustu užitečných informací. Ať už vás zajímají
-            inovace, podnikání nebo jen hledáte inspiraci, tady rozhodně najdete
-            něco, co vás posune dál. Osobně mě zaujalo, jak přehledně je celý
-            web zpracován a jak snadné je najít přesně to, co potřebujete.<br /><br />
-            <strong>https://www.cyber.cz</strong><br /><br />
-            V dnešní době, kdy jsme všichni zahlceni obsahem, je příjemné
-            narazit na něco, co opravdu dává smysl. Myslím, že by stálo za to se
-            na to podívat a zjistit, jestli vás to osloví stejně jako mě. Jestli
-            budete mít chvíli času, dejte mi vědět, co si o tom myslíte. Rád si
-            poslechnu váš názor!<br /><br />
-            Mějte se hezky a ať se vám daří,<br /><br />
-            Petr Novák
-          </p>
-        </div>
-      </div>
-      <img src="/assets/Snímek obrazovky 2025-03-26 175050.png" alt="" />
-      <div id="mainContent">
-        <div class="item | spItem" id="itemSp">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová nabídka od dodavatele</label
-          >
-          <p class="content">
-            Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
-          </p>
-          <div id="new">Nový</div>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová nabídka od dodavatele</label
-          >
-          <p class="content">
-            Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Vaše objednávka byla odeslána</label
-          >
-          <p class="content">
-            Zásilka byla odeslána a očekáváme doručení do 3 pracovních dnů.
-          </p>
-          <span class="date"></span>
-        </div>
-
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Pozvánka na konferenci</label
-          >
-          <p class="content">
-            Přijďte na exkluzivní akci o moderních technologiích v online
-            marketingu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Faktura za služby</label
-          >
-          <p class="content">
-            Přikládáme fakturu za poslední měsíc ve formátu PDF.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Upozornění: Heslo expirovalo</label
-          >
-          <p class="content">
-            Vaše heslo je nutné aktualizovat pro zachování bezpečnosti účtu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Důležitá aktualizace systému</label
-          >
-          <p class="content">
-            Nová verze aplikace přináší vylepšenou stabilitu a nové funkce.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Změna obchodních podmínek</label
-          >
-          <p class="content">
-            Prosíme vás o přečtení nových podmínek, které vstoupí v platnost od
-            1. ledna.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Dovolená schválena</label
-          >
-          <p class="content">
-            Vaše žádost o dovolenou byla schválena. Užijte si volno!
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová zpráva od zákazníka</label
-          >
-          <p class="content">
-            Dobrý den, mám zájem o vaše služby, můžete mi poskytnout více
-            informací?
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Potvrzení schůzky</label
-          >
-          <p class="content">Vaše schůzka je naplánována na pondělí v 10:00.</p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Reklamační řízení</label
-          >
-          <p class="content">
-            Vaše reklamace byla přijata a bude zpracována do 14 dnů.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Newsletter - Novinky na trhu</label
-          >
-          <p class="content">
-            Podívejte se na nejnovější trendy v e-commerce a online marketingu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Změna pracovního rozvrhu</label
-          >
-          <p class="content">
-            Došlo ke změně vašeho pracovního harmonogramu, prosím zkontrolujte.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Slevový kód pro věrné zákazníky</label
-          >
-          <p class="content">
-            Jako poděkování za vaši věrnost vám posíláme 15% slevový kód.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Důležité: Výpadek serveru</label
-          >
-          <p class="content">
-            Náš server zaznamenal výpadek, očekávané obnovení provozu za 2
-            hodiny.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nabídka spolupráce</label
-          >
-          <p class="content">
-            Máme zájem o spolupráci s vaší firmou, dejte nám vědět, zda máte
-            zájem.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Přehled aktivit na vašem účtu</label
-          >
-          <p class="content">
-            Posíláme vám měsíční přehled vašich aktivit a statistik.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Poděkování za zpětnou vazbu</label
-          >
-          <p class="content">
-            Děkujeme za vaši zpětnou vazbu, pomáháte nám se zlepšovat.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Oznámení o novém produktu</label
-          >
-          <p class="content">
-            Představujeme vám naši nejnovější inovaci – zjistěte více zde.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Otevřená pracovní pozice</label
-          >
-          <p class="content">
-            Hledáme nové kolegy, podívejte se na naši nabídku pracovních míst.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová nabídka od dodavatele</label
-          >
-          <p class="content">
-            Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Vaše objednávka byla odeslána</label
-          >
-          <p class="content">
-            Zásilka byla odeslána a očekáváme doručení do 3 pracovních dnů.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Pozvánka na konferenci</label
-          >
-          <p class="content">
-            Přijďte na exkluzivní akci o moderních technologiích v online
-            marketingu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Faktura za služby</label
-          >
-          <p class="content">
-            Přikládáme fakturu za poslední měsíc ve formátu PDF.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Upozornění: Heslo expirovalo</label
-          >
-          <p class="content">
-            Vaše heslo je nutné aktualizovat pro zachování bezpečnosti účtu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Důležitá aktualizace systému</label
-          >
-          <p class="content">
-            Nová verze aplikace přináší vylepšenou stabilitu a nové funkce.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Změna obchodních podmínek</label
-          >
-          <p class="content">
-            Prosíme vás o přečtení nových podmínek, které vstoupí v platnost od
-            1. ledna.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Dovolená schválena</label
-          >
-          <p class="content">
-            Vaše žádost o dovolenou byla schválena. Užijte si volno!
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová zpráva od zákazníka</label
-          >
-          <p class="content">
-            Dobrý den, mám zájem o vaše služby, můžete mi poskytnout více
-            informací?
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Potvrzení schůzky</label
-          >
-          <p class="content">Vaše schůzka je naplánována na pondělí v 10:00.</p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Reklamační řízení</label
-          >
-          <p class="content">
-            Vaše reklamace byla přijata a bude zpracována do 14 dnů.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Newsletter - Novinky na trhu</label
-          >
-          <p class="content">
-            Podívejte se na nejnovější trendy v e-commerce a online marketingu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Změna pracovního rozvrhu</label
-          >
-          <p class="content">
-            Došlo ke změně vašeho pracovního harmonogramu, prosím zkontrolujte.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Slevový kód pro věrné zákazníky</label
-          >
-          <p class="content">
-            Jako poděkování za vaši věrnost vám posíláme 15% slevový kód.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Důležité: Výpadek serveru</label
-          >
-          <p class="content">
-            Náš server zaznamenal výpadek, očekávané obnovení provozu za 2
-            hodiny.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nabídka spolupráce</label
-          >
-          <p class="content">
-            Máme zájem o spolupráci s vaší firmou, dejte nám vědět, zda máte
-            zájem.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Přehled aktivit na vašem účtu</label
-          >
-          <p class="content">
-            Posíláme vám měsíční přehled vašich aktivit a statistik.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Poděkování za zpětnou vazbu</label
-          >
-          <p class="content">
-            Děkujeme za vaši zpětnou vazbu, pomáháte nám se zlepšovat.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Oznámení o novém produktu</label
-          >
-          <p class="content">
-            Představujeme vám naši nejnovější inovaci – zjistěte více zde.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Otevřená pracovní pozice</label
-          >
-          <p class="content">
-            Hledáme nové kolegy, podívejte se na naši nabídku pracovních míst.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová nabídka od dodavatele</label
-          >
-          <p class="content">
-            Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Vaše objednávka byla odeslána</label
-          >
-          <p class="content">
-            Zásilka byla odeslána a očekáváme doručení do 3 pracovních dnů.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Pozvánka na konferenci</label
-          >
-          <p class="content">
-            Přijďte na exkluzivní akci o moderních technologiích v online
-            marketingu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Faktura za služby</label
-          >
-          <p class="content">
-            Přikládáme fakturu za poslední měsíc ve formátu PDF.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Upozornění: Heslo expirovalo</label
-          >
-          <p class="content">
-            Vaše heslo je nutné aktualizovat pro zachování bezpečnosti účtu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Důležitá aktualizace systému</label
-          >
-          <p class="content">
-            Nová verze aplikace přináší vylepšenou stabilitu a nové funkce.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Změna obchodních podmínek</label
-          >
-          <p class="content">
-            Prosíme vás o přečtení nových podmínek, které vstoupí v platnost od
-            1. ledna.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Dovolená schválena</label
-          >
-          <p class="content">
-            Vaše žádost o dovolenou byla schválena. Užijte si volno!
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nová zpráva od zákazníka</label
-          >
-          <p class="content">
-            Dobrý den, mám zájem o vaše služby, můžete mi poskytnout více
-            informací?
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Potvrzení schůzky</label
-          >
-          <p class="content">Vaše schůzka je naplánována na pondělí v 10:00.</p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Reklamační řízení</label
-          >
-          <p class="content">
-            Vaše reklamace byla přijata a bude zpracována do 14 dnů.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Newsletter - Novinky na trhu</label
-          >
-          <p class="content">
-            Podívejte se na nejnovější trendy v e-commerce a online marketingu.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Změna pracovního rozvrhu</label
-          >
-          <p class="content">
-            Došlo ke změně vašeho pracovního harmonogramu, prosím zkontrolujte.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Slevový kód pro věrné zákazníky</label
-          >
-          <p class="content">
-            Jako poděkování za vaši věrnost vám posíláme 15% slevový kód.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Důležité: Výpadek serveru</label
-          >
-          <p class="content">
-            Náš server zaznamenal výpadek, očekávané obnovení provozu za 2
-            hodiny.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Nabídka spolupráce</label
-          >
-          <p class="content">
-            Máme zájem o spolupráci s vaší firmou, dejte nám vědět, zda máte
-            zájem.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Přehled aktivit na vašem účtu</label
-          >
-          <p class="content">
-            Posíláme vám měsíční přehled vašich aktivit a statistik.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Poděkování za zpětnou vazbu</label
-          >
-          <p class="content">
-            Děkujeme za vaši zpětnou vazbu, pomáháte nám se zlepšovat.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Oznámení o novém produktu</label
-          >
-          <p class="content">
-            Představujeme vám naši nejnovější inovaci – zjistěte více zde.
-          </p>
-          <span class="date"></span>
-        </div>
-        <div class="item">
-          <input type="checkbox" /><label for="" class="name"
-            >Otevřená pracovní pozice</label
-          >
-          <p class="content">
-            Hledáme nové kolegy, podívejte se na naši nabídku pracovních míst.
-          </p>
-          <span class="date"></span>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Pozvánka na konferenci</label
+            >
+            <p class="content">
+              Přijďte na exkluzivní akci o moderních technologiích v online
+              marketingu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Faktura za služby</label
+            >
+            <p class="content">
+              Přikládáme fakturu za poslední měsíc ve formátu PDF.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Upozornění: Heslo expirovalo</label
+            >
+            <p class="content">
+              Vaše heslo je nutné aktualizovat pro zachování bezpečnosti účtu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Důležitá aktualizace systému</label
+            >
+            <p class="content">
+              Nová verze aplikace přináší vylepšenou stabilitu a nové funkce.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Změna obchodních podmínek</label
+            >
+            <p class="content">
+              Prosíme vás o přečtení nových podmínek, které vstoupí v platnost
+              od 1. ledna.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Dovolená schválena</label
+            >
+            <p class="content">
+              Vaše žádost o dovolenou byla schválena. Užijte si volno!
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová zpráva od zákazníka</label
+            >
+            <p class="content">
+              Dobrý den, mám zájem o vaše služby, můžete mi poskytnout více
+              informací?
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Potvrzení schůzky</label
+            >
+            <p class="content">
+              Vaše schůzka je naplánována na pondělí v 10:00.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Reklamační řízení</label
+            >
+            <p class="content">
+              Vaše reklamace byla přijata a bude zpracována do 14 dnů.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Newsletter - Novinky na trhu</label
+            >
+            <p class="content">
+              Podívejte se na nejnovější trendy v e-commerce a online
+              marketingu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Změna pracovního rozvrhu</label
+            >
+            <p class="content">
+              Došlo ke změně vašeho pracovního harmonogramu, prosím
+              zkontrolujte.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Slevový kód pro věrné zákazníky</label
+            >
+            <p class="content">
+              Jako poděkování za vaši věrnost vám posíláme 15% slevový kód.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Důležité: Výpadek serveru</label
+            >
+            <p class="content">
+              Náš server zaznamenal výpadek, očekávané obnovení provozu za 2
+              hodiny.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nabídka spolupráce</label
+            >
+            <p class="content">
+              Máme zájem o spolupráci s vaší firmou, dejte nám vědět, zda máte
+              zájem.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Přehled aktivit na vašem účtu</label
+            >
+            <p class="content">
+              Posíláme vám měsíční přehled vašich aktivit a statistik.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Poděkování za zpětnou vazbu</label
+            >
+            <p class="content">
+              Děkujeme za vaši zpětnou vazbu, pomáháte nám se zlepšovat.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Oznámení o novém produktu</label
+            >
+            <p class="content">
+              Představujeme vám naši nejnovější inovaci – zjistěte více zde.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Otevřená pracovní pozice</label
+            >
+            <p class="content">
+              Hledáme nové kolegy, podívejte se na naši nabídku pracovních míst.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová nabídka od dodavatele</label
+            >
+            <p class="content">
+              Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Vaše objednávka byla odeslána</label
+            >
+            <p class="content">
+              Zásilka byla odeslána a očekáváme doručení do 3 pracovních dnů.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Pozvánka na konferenci</label
+            >
+            <p class="content">
+              Přijďte na exkluzivní akci o moderních technologiích v online
+              marketingu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Faktura za služby</label
+            >
+            <p class="content">
+              Přikládáme fakturu za poslední měsíc ve formátu PDF.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Upozornění: Heslo expirovalo</label
+            >
+            <p class="content">
+              Vaše heslo je nutné aktualizovat pro zachování bezpečnosti účtu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Důležitá aktualizace systému</label
+            >
+            <p class="content">
+              Nová verze aplikace přináší vylepšenou stabilitu a nové funkce.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Změna obchodních podmínek</label
+            >
+            <p class="content">
+              Prosíme vás o přečtení nových podmínek, které vstoupí v platnost
+              od 1. ledna.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Dovolená schválena</label
+            >
+            <p class="content">
+              Vaše žádost o dovolenou byla schválena. Užijte si volno!
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová zpráva od zákazníka</label
+            >
+            <p class="content">
+              Dobrý den, mám zájem o vaše služby, můžete mi poskytnout více
+              informací?
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Potvrzení schůzky</label
+            >
+            <p class="content">
+              Vaše schůzka je naplánována na pondělí v 10:00.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Reklamační řízení</label
+            >
+            <p class="content">
+              Vaše reklamace byla přijata a bude zpracována do 14 dnů.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Newsletter - Novinky na trhu</label
+            >
+            <p class="content">
+              Podívejte se na nejnovější trendy v e-commerce a online
+              marketingu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Změna pracovního rozvrhu</label
+            >
+            <p class="content">
+              Došlo ke změně vašeho pracovního harmonogramu, prosím
+              zkontrolujte.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Slevový kód pro věrné zákazníky</label
+            >
+            <p class="content">
+              Jako poděkování za vaši věrnost vám posíláme 15% slevový kód.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Důležité: Výpadek serveru</label
+            >
+            <p class="content">
+              Náš server zaznamenal výpadek, očekávané obnovení provozu za 2
+              hodiny.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nabídka spolupráce</label
+            >
+            <p class="content">
+              Máme zájem o spolupráci s vaší firmou, dejte nám vědět, zda máte
+              zájem.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Přehled aktivit na vašem účtu</label
+            >
+            <p class="content">
+              Posíláme vám měsíční přehled vašich aktivit a statistik.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Poděkování za zpětnou vazbu</label
+            >
+            <p class="content">
+              Děkujeme za vaši zpětnou vazbu, pomáháte nám se zlepšovat.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Oznámení o novém produktu</label
+            >
+            <p class="content">
+              Představujeme vám naši nejnovější inovaci – zjistěte více zde.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Otevřená pracovní pozice</label
+            >
+            <p class="content">
+              Hledáme nové kolegy, podívejte se na naši nabídku pracovních míst.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová nabídka od dodavatele</label
+            >
+            <p class="content">
+              Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Vaše objednávka byla odeslána</label
+            >
+            <p class="content">
+              Zásilka byla odeslána a očekáváme doručení do 3 pracovních dnů.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Pozvánka na konferenci</label
+            >
+            <p class="content">
+              Přijďte na exkluzivní akci o moderních technologiích v online
+              marketingu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Faktura za služby</label
+            >
+            <p class="content">
+              Přikládáme fakturu za poslední měsíc ve formátu PDF.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Upozornění: Heslo expirovalo</label
+            >
+            <p class="content">
+              Vaše heslo je nutné aktualizovat pro zachování bezpečnosti účtu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Důležitá aktualizace systému</label
+            >
+            <p class="content">
+              Nová verze aplikace přináší vylepšenou stabilitu a nové funkce.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Změna obchodních podmínek</label
+            >
+            <p class="content">
+              Prosíme vás o přečtení nových podmínek, které vstoupí v platnost
+              od 1. ledna.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Dovolená schválena</label
+            >
+            <p class="content">
+              Vaše žádost o dovolenou byla schválena. Užijte si volno!
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nová zpráva od zákazníka</label
+            >
+            <p class="content">
+              Dobrý den, mám zájem o vaše služby, můžete mi poskytnout více
+              informací?
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Potvrzení schůzky</label
+            >
+            <p class="content">
+              Vaše schůzka je naplánována na pondělí v 10:00.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Reklamační řízení</label
+            >
+            <p class="content">
+              Vaše reklamace byla přijata a bude zpracována do 14 dnů.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Newsletter - Novinky na trhu</label
+            >
+            <p class="content">
+              Podívejte se na nejnovější trendy v e-commerce a online
+              marketingu.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Změna pracovního rozvrhu</label
+            >
+            <p class="content">
+              Došlo ke změně vašeho pracovního harmonogramu, prosím
+              zkontrolujte.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Slevový kód pro věrné zákazníky</label
+            >
+            <p class="content">
+              Jako poděkování za vaši věrnost vám posíláme 15% slevový kód.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Důležité: Výpadek serveru</label
+            >
+            <p class="content">
+              Náš server zaznamenal výpadek, očekávané obnovení provozu za 2
+              hodiny.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Nabídka spolupráce</label
+            >
+            <p class="content">
+              Máme zájem o spolupráci s vaší firmou, dejte nám vědět, zda máte
+              zájem.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Přehled aktivit na vašem účtu</label
+            >
+            <p class="content">
+              Posíláme vám měsíční přehled vašich aktivit a statistik.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Poděkování za zpětnou vazbu</label
+            >
+            <p class="content">
+              Děkujeme za vaši zpětnou vazbu, pomáháte nám se zlepšovat.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Oznámení o novém produktu</label
+            >
+            <p class="content">
+              Představujeme vám naši nejnovější inovaci – zjistěte více zde.
+            </p>
+            <span class="date"></span>
+          </div>
+          <div class="item">
+            <input type="checkbox" /><label for="" class="name"
+              >Otevřená pracovní pozice</label
+            >
+            <p class="content">
+              Hledáme nové kolegy, podívejte se na naši nabídku pracovních míst.
+            </p>
+            <span class="date"></span>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="fill.js"></script>
   </body>
 </html>

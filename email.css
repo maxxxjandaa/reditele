@@ -6,10 +6,47 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #111111;
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: relative;
+  background-color: #111111;
+}
+
+#topCancel {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid #2c2c2c;
+}
+#topCancel a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#topCancel a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#topCancel a img {
+  height: 24px;
+  width: 24px;
+}
+
+#topCancel span {
+  font-size: 1.125rem;
+  color: #fafafa;
+  font-weight: 500;
+}
+
+#mainWrapper {
+  display: flex;
 }
 
 #sidebar {
@@ -21,12 +58,12 @@ body {
   gap: 24px;
   align-items: center;
   padding-top: 24px;
-  height: 100vh;
+  height: calc(100vh - 50px);
 }
 
 #main {
   width: 90%;
-  height: 100vh;
+  height: calc(100vh - 50px);
 }
 
 #logo {
