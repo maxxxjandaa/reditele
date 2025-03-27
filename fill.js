@@ -27,7 +27,7 @@ const firstNames = [
   "Jana",
   "Martina",
   "Lucie",
-  "Tomáš",
+  "Tomas",
   "Anna",
   "Jakub",
   "Karla",
@@ -36,34 +36,34 @@ const firstNames = [
   "Marie",
   "David",
   "Eva",
-  "František",
+  "Frantisek",
   "Pavla",
   "Veronika",
   "Roman",
-  "Václav",
-  "Zdeněk",
+  "Vaclav",
+  "Zdenek",
 ];
 const lastNames = [
-  "Novák",
+  "Novak",
   "Svoboda",
-  "Novotný",
-  "Dvořák",
-  "Černý",
-  "Procházka",
-  "Růžička",
-  "Kučera",
+  "Novotny",
+  "Dvorak",
+  "Cerny",
+  "Prochazka",
+  "Ruzicka",
+  "Kucera",
   "Marek",
-  "Kovář",
-  "Král",
-  "Pokorný",
-  "Jelínek",
-  "Šimek",
-  "Veselý",
-  "Horák",
-  "Kubík",
-  "Bláha",
-  "Němec",
-  "Svěrák",
+  "Kovar",
+  "Kral",
+  "Pokorny",
+  "Jelinek",
+  "Simek",
+  "Vesely",
+  "Horak",
+  "Kubik",
+  "Blaha",
+  "Nemec",
+  "Sverak",
 ];
 
 const numAccoutn = [
@@ -88,6 +88,7 @@ const numAccoutn = [
   "6543210987/0800",
   "9012345678/0800",
 ];
+
 const domains = [
   "@gmail.com",
   "@seznam.cz",
@@ -108,6 +109,11 @@ const passwords = [
   "hesloheslo",
 ];
 
+// Funkce pro odstranění diakritiky
+function removeDiacritics(str) {
+  return str.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+}
+
 // Funkce pro generování náhodných hodnot a přiřazení do elementů
 function generateRandomData() {
   const randomFirstName =
@@ -115,17 +121,17 @@ function generateRandomData() {
   const randomLastName =
     lastNames[Math.floor(Math.random() * lastNames.length)];
   const randomEmail =
-    randomFirstName.toLowerCase() +
-    randomLastName.toLowerCase() +
-    domains[Math.floor(Math.random() * domains.length)];
+    removeDiacritics(
+      randomFirstName.toLowerCase() + randomLastName.toLowerCase()
+    ) + domains[Math.floor(Math.random() * domains.length)];
   const randomPassword =
     passwords[Math.floor(Math.random() * passwords.length)];
   const randomAccount =
     numAccoutn[Math.floor(Math.random() * numAccoutn.length)];
 
   // Použití innerHTML pro zobrazení hodnot v HTML
-  document.getElementById("name").innerHTML = "Jméno: " + randomFirstName;
-  document.getElementById("surname").innerHTML = "Příjmení: " + randomLastName;
+  document.getElementById("name").innerHTML = "Jmeno: " + randomFirstName;
+  document.getElementById("surname").innerHTML = "Prijmeni: " + randomLastName;
   document.getElementById("email").innerHTML = "Email: " + randomEmail;
   document.getElementById("password").innerHTML = "Heslo: " + randomPassword;
   document.getElementById("cislo_uctu").innerHTML = randomAccount;
@@ -182,3 +188,24 @@ const closeMessage = document.getElementById("close");
 closeMessage.addEventListener("click", () => {
   draggableWindow.style.display = "none";
 });
+
+// ! Level status making
+
+const levelOne = document.getElementById("levelOne");
+const levelTwo = document.getElementById("levelTwo");
+const levelThree = document.getElementById("levelThree");
+
+let controller = 1;
+
+if (controller == 0) {
+  // level 1
+  levelTwo.style.color = "rgba(255, 255, 255, 0.2)";
+  levelThree.style.color = "rgba(255, 255, 255, 0.2)";
+} else if (controller == 1) {
+  // level 2
+  levelTwo.style.color = "rgb(255, 255, 255)";
+  levelThree.style.color = "rgba(255, 255, 255, 0.2)";
+} else {
+  levelThree.style.color = "rgb(255, 255, 255)";
+  // level 3
+}

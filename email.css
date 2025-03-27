@@ -187,6 +187,27 @@ body {
   gap: 8px;
 }
 
+#headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#headerContent button {
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+}
+
+#headerContent button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 #from,
 #predmet {
   color: #2b2b2b;
@@ -241,4 +262,44 @@ strong {
 .small {
   font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.7);
+}
+
+#timeline {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 16px 0;
+}
+
+.pipe {
+  height: 50px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#timeline img {
+  height: 16px;
+  width: 16px;
+}
+
+#timeline .levels {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#timeline h5 {
+  font-size: 1.25rem;
+  color: #fafafa;
+}
+
+#timeline h2 {
+  font-size: 1.5rem;
+  color: #fafafa;
+  margin-bottom: 32px;
 }
