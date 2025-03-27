@@ -50,7 +50,8 @@
           <h1>Status</h1>
           <div class="levels">
             <h5 id="levelOne">Level 1</h5>
-            <img src="/assets/mark.png" alt="" />
+            <img id="icontrue" src="/assets/mark.png" alt="" />
+            <img id="iconfalse" src="/assets/canceld.png" alt="" />
           </div>
           <div class="pipe"></div>
           <div class="levels">
@@ -83,7 +84,7 @@
           <div class="content">
             <div id="headerContent">
               <span id="from">Od: info@zasilkovna-support.com</span>
-              <button>Nahlásit</button>
+              <button id="reportBtn">Nahlásit</button>
             </div>
 
             <hr />
@@ -118,11 +119,10 @@
           </div>
           <img src="/assets/zasilkovna.png" alt="" />
           <h1>Přihlášení</h1>
-          <form action="">
-            <input type="text" placeholder="E-mail" id="email" />
-            <input type="password" placeholder="Heslo" id="password" />
-            <button>Odeslat</button>
-          </form>
+
+          <input type="text" placeholder="E-mail" id="email" />
+          <input type="password" placeholder="Heslo" id="password" />
+          <button id="submitBtn">Odeslat</button>
         </div>
 
         <img src="/assets/Snímek obrazovky 2025-03-26 175050.png" alt="" />
@@ -715,7 +715,9 @@
       </div>
     </div>
     <script src="levels.js"></script>
+    <script src="ending.js"></script>
     <script src="fill.js"></script>
     <script src="windows.js"></script>
+    <script src="dataCatcher.js"></script>
   </body>
 </html>

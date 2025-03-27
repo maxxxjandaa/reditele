@@ -321,6 +321,7 @@ strong {
 #timeline img {
   height: 16px;
   width: 16px;
+  display: none;
 }
 
 #timeline .levels {
@@ -377,14 +378,7 @@ strong {
   gap: 24px;
 }
 
-#loginFake form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 300px;
-}
-
-#loginFake form input {
+#loginFake input {
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -392,7 +386,7 @@ strong {
   padding: 8px;
 }
 
-#loginFake form button {
+#loginFake button {
   height: 40px;
   background-color: #ccc;
   border: none;
