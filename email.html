@@ -14,13 +14,8 @@
     />
   </head>
   <body>
-    <div id="topCancel">
-      .
-      <span>Email</span>
-      <a href="desktop.html"
-        ><img id="closePage" src="/assets/whiteClose.svg" alt=""
-      /></a>
-    </div>
+    <!-- !User data -->
+
     <div id="info">
       <h1>Vaše údaje</h1>
       <hr />
@@ -43,16 +38,42 @@
         </div>
       </div>
     </div>
+
+    <!-- !Main -->
+
     <div id="mainWrapper">
+      <!-- !Sidebar -->
       <div id="sidebar">
         <h1 id="logo">Cyber</h1>
         <img src="/assets/Snímek obrazovky 2025-03-26 174736.png" alt="" />
+        <div id="timeline">
+          <h1>Status</h1>
+          <div class="levels">
+            <h5 id="levelOne">Level 1</h5>
+            <img src="/assets/mark.png" alt="" />
+          </div>
+          <div class="pipe"></div>
+          <div class="levels">
+            <h5 id="levelTwo">Level 2</h5>
+            <!-- <img  src="/assets/mark.png" alt="" /> -->
+          </div>
+          <div class="pipe"></div>
+          <div class="levels">
+            <h5 id="levelThree">Level 3</h5>
+            <!-- <img src="/assets/mark.png" alt="" /> -->
+          </div>
+        </div>
+        <div id="scenar">
+          <h1>Scénář</h1>
+          <p id="levelText"></p>
+        </div>
       </div>
       <div id="main">
-        <div class="window" id="draggableWindow">
+        <!-- ! Email/Level 1 -->
+        <div class="window draggableWindow" style="position: absolute">
           <div id="wrapp">
-            <div class="header" id="dragHeader">
-              <span> Nová zpráva</span>
+            <div class="header dragHeader">
+              <span>Nová zpráva</span>
               <div id="editables">
                 <img id="close" src="/assets/icons8-close.svg" alt="" />
               </div>
@@ -61,43 +82,69 @@
 
           <div class="content">
             <div id="headerContent">
-              <span id="from">Od: petrnovak@seznam.cz</span>
+              <span id="from">Od: info@zasilkovna-support.com</span>
               <button>Nahlásit</button>
             </div>
 
             <hr />
-            <span id="predmet">Předmět: Nová nabídka od dodavatele</span>
+            <span id="predmet"
+              >Předmět: 🛑 Problém s doručením vaší zásilky č. #CZ847263</span
+            >
             <hr />
             <p id="mesage">
-              Dobrý den,<br /><br />
-              narazil jsem na něco, co by vás mohlo zajímat. V dnešní době, kdy
-              se neustále mění trendy a technologie, je důležité mít přístup k
-              těm nejlepším informacím.<br /><br />
-              A právě na to jsem narazil! Možná jste už slyšeli o této stránce,
-              která přináší spoustu užitečných informací. Ať už vás zajímají
-              inovace, podnikání nebo jen hledáte inspiraci, tady rozhodně
-              najdete něco, co vás posune dál. Osobně mě zaujalo, jak přehledně
-              je celý web zpracován a jak snadné je najít přesně to, co
-              potřebujete.<br /><br />
-              <strong>https://www.cyber.cz</strong><br /><br />
-              V dnešní době, kdy jsme všichni zahlceni obsahem, je příjemné
-              narazit na něco, co opravdu dává smysl. Myslím, že by stálo za to
-              se na to podívat a zjistit, jestli vás to osloví stejně jako mě.
-              Jestli budete mít chvíli času, dejte mi vědět, co si o tom
-              myslíte. Rád si poslechnu váš názor!<br /><br />
-              Mějte se hezky a ať se vám daří,<br /><br />
-              Petr Novák
+              Vážený zákazníku,<br /><br />
+              během přepravy vaší zásilky č. #CZ847263 došlo k neočekávanému
+              problému, který znemožnil doručení na vámi uvedenou adresu.
+              Abychom mohli balíček znovu odeslat, prosíme o ověření
+              doručovacích údajů co nejdříve.<br /><br />
+              📦 Detaily zásilky: <br /><br />Číslo balíčku: #CZ847263<br />
+              Stav: Pozastaveno – chybějící informace Poslední pokus o doručení:
+              25. března 2025 <br />Prosím klikněte na níže uvedený odkaz a
+              potvrďte vaše údaje:<br /><br />
+              👉 <strong id="link">Ověřit doručovací údaje</strong><br /><br />
+              Pokud nebude zásilka potvrzená do 48 hodin, bude automaticky
+              vrácena odesilateli.<br /><br />
+              Děkujeme za spolupráci,<br /><br />
+              Tým Zásilkovna
             </p>
           </div>
         </div>
+
+        <!-- !Login Fake Level 1 -->
+
+        <div id="loginFake">
+          <div id="CloseBar">
+            <img id="closeLogin" src="/assets/icons8-close.svg" alt="" />
+          </div>
+          <img src="/assets/zasilkovna.png" alt="" />
+          <h1>Přihlášení</h1>
+          <form action="">
+            <input type="text" placeholder="E-mail" id="email" />
+            <input type="password" placeholder="Heslo" id="password" />
+            <button>Odeslat</button>
+          </form>
+        </div>
+
         <img src="/assets/Snímek obrazovky 2025-03-26 175050.png" alt="" />
         <div id="mainContent">
-          <div class="item | spItem" id="itemSp">
+          <div class="item | spItem" id="email2">
             <input type="checkbox" /><label for="" class="name"
-              >Nová nabídka od dodavatele</label
+              >🛑 Problém s asdasdasdasdasdas vaší zásilky č. #CZ847263</label
             >
             <p class="content">
-              Dobrý den, máme pro vás speciální slevu na objednávky nad 5000 Kč.
+              Vážený zákazníku, během přepravy vaší zásilky č. #CZ847263 došlo k
+              neočekávanému problému.....
+            </p>
+            <div id="new">Nový</div>
+            <span class="date"></span>
+          </div>
+          <div class="item | spItem" id="email1">
+            <input type="checkbox" /><label for="" class="name"
+              >🛑 Problém s doručením vaší zásilky č. #CZ847263</label
+            >
+            <p class="content">
+              Vážený zákazníku, během přepravy vaší zásilky č. #CZ847263 došlo k
+              neočekávanému problému.....
             </p>
             <div id="new">Nový</div>
             <span class="date"></span>
@@ -667,7 +714,8 @@
         </div>
       </div>
     </div>
-
+    <script src="levels.js"></script>
     <script src="fill.js"></script>
+    <script src="windows.js"></script>
   </body>
 </html>

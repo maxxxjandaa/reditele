@@ -58,12 +58,12 @@ body {
   gap: 24px;
   align-items: center;
   padding-top: 24px;
-  height: calc(100vh - 50px);
+  height: 100vh;
 }
 
 #main {
   width: 90%;
-  height: calc(100vh - 50px);
+  height: 100vh;
 }
 
 #logo {
@@ -144,9 +144,9 @@ body {
   border-radius: 5px;
 }
 
-.spItem:hover {
+/* .spItem:hover {
   background-color: #cc0606;
-}
+} */
 
 .spItem label {
   cursor: pointer;
@@ -159,7 +159,7 @@ body {
   font-size: 0.8rem;
 }
 
-#itemSp {
+.spItem {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -211,8 +211,7 @@ body {
 
   height: 100%;
 }
-
-#editables img {
+#close {
   height: 16px;
   width: 16px;
   cursor: pointer;
@@ -299,4 +298,118 @@ strong {
 .small {
   font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.7);
+}
+
+#timeline {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.pipe {
+  height: 50px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#timeline img {
+  height: 16px;
+  width: 16px;
+}
+
+#timeline .levels {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#timeline h5 {
+  font-size: 1.25rem;
+  color: #fafafa;
+}
+
+#timeline h1 {
+  font-size: 1.5rem;
+  color: #fafafa;
+  margin-bottom: 32px;
+}
+
+#scenar {
+  background-color: #2b2b2b;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px;
+  border-radius: 10px;
+}
+
+#scenar h1 {
+  font-size: 1.5rem;
+  color: #fafafa;
+}
+
+#scenar #levelText {
+  color: #fafafa;
+  line-height: 1.5em;
+}
+
+#loginFake {
+  background-color: #f0f0f0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1000;
+  top: 100px;
+  left: 100px;
+  padding: 24px;
+  border-radius: 10px;
+  gap: 24px;
+}
+
+#loginFake form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+}
+
+#loginFake form input {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px;
+}
+
+#loginFake form button {
+  height: 40px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#CloseBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#closeLogin {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
 }

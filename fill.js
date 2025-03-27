@@ -1,3 +1,6 @@
+// ! Date filling script
+// ! This script fills the date fields
+
 document.addEventListener("DOMContentLoaded", function () {
   const dateElements = document.querySelectorAll(".date");
 
@@ -14,11 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const userData = document.getElementById("info");
-
-userData.addEventListener("click", function () {
-  userData.classList.toggle("active");
-});
+//
+//
+//
+//
+// ! Random user data generation script
+//
+//
+//
+//
 
 // Seznamy pro generování náhodných hodnot
 const firstNames = [
@@ -140,51 +147,33 @@ function generateRandomData() {
 // Automatické vygenerování dat po načtení stránky
 window.onload = generateRandomData;
 
-// !NewNemail
+//
+//
+//
+//
+// ! Level script fill
+//
+//
+//
+//
 
-function newEmail() {
-  const newEmailHtml = document.getElementById("itemSp");
-  newEmailHtml.style.display = "flex";
+const levelText = document.getElementById("levelText");
+
+const datesetLevelOne =
+  "Objednal sis balíček #CZ847263 a netrpělivě čekáš na doručení. Najednou ti přijde e-mail, že se zásilka #CZ847263 ztratila a musíš zadat své údaje pro opětovné doručení. Zní to naléhavě, ale je to skutečné, nebo jen past? Dávej pozor a pokud máš podezření, raději e-mail nahlas!";
+console.log(window.globalLevelControler);
+if (window.globalLevelControler == 0) {
+  levelText.innerHTML = datesetLevelOne;
 }
 
-setTimeout(newEmail, 2000);
-
-// ! Drag and drop
-
-const draggableWindow = document.getElementById("draggableWindow");
-const dragHeader = document.getElementById("dragHeader");
-
-let offsetX = 0,
-  offsetY = 0,
-  isDragging = false;
-
-dragHeader.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  offsetX = e.clientX - draggableWindow.offsetLeft;
-  offsetY = e.clientY - draggableWindow.offsetTop;
+const copyButton = document.getElementById("closeLogin");
+const loginFake = document.getElementById("loginFake");
+copyButton.addEventListener("click", () => {
+  loginFake.style.display = "none";
 });
 
-document.addEventListener("mousemove", (e) => {
-  if (isDragging) {
-    draggableWindow.style.left = `${e.clientX - offsetX}px`;
-    draggableWindow.style.top = `${e.clientY - offsetY}px`;
-  }
-});
+const link = document.getElementById("link");
 
-document.addEventListener("mouseup", () => {
-  isDragging = false;
-});
-
-// !Open message
-const newMessage = document.getElementById("itemSp");
-newMessage.addEventListener("click", () => {
-  draggableWindow.style.display = "block";
-});
-
-// ! Close message
-
-const closeMessage = document.getElementById("close");
-
-closeMessage.addEventListener("click", () => {
-  draggableWindow.style.display = "none";
+link.addEventListener("click", () => {
+  loginFake.style.display = "flex";
 });
