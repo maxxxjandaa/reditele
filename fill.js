@@ -127,11 +127,11 @@ function generateRandomData() {
     firstNames[Math.floor(Math.random() * firstNames.length)];
   const randomLastName =
     lastNames[Math.floor(Math.random() * lastNames.length)];
-  const randomEmail =
+  window.glovalRandomEmail =
     removeDiacritics(
       randomFirstName.toLowerCase() + randomLastName.toLowerCase()
     ) + domains[Math.floor(Math.random() * domains.length)];
-  const randomPassword =
+  window.globalRandomPassword =
     passwords[Math.floor(Math.random() * passwords.length)];
   const randomAccount =
     numAccoutn[Math.floor(Math.random() * numAccoutn.length)];
@@ -139,8 +139,10 @@ function generateRandomData() {
   // Použití innerHTML pro zobrazení hodnot v HTML
   document.getElementById("name").innerHTML = "Jmeno: " + randomFirstName;
   document.getElementById("surname").innerHTML = "Prijmeni: " + randomLastName;
-  document.getElementById("email").innerHTML = "Email: " + randomEmail;
-  document.getElementById("password").innerHTML = "Heslo: " + randomPassword;
+  document.getElementById("email").innerHTML =
+    "Email: " + window.glovalRandomEmail;
+  document.getElementById("password").innerHTML =
+    "Heslo: " + window.globalRandomPassword;
   document.getElementById("cislo_uctu").innerHTML = randomAccount;
 }
 

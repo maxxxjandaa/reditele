@@ -1,7 +1,6 @@
 const reportButton = document.getElementById("reportBtn");
-let levelOneEmail = document.getElementById("email");
-let levelOnePassword = document.getElementById("password");
-const levelOneSubmitBtn = document.getElementById("submitBtn");
+
+// !Report button
 
 reportButton.addEventListener("click", () => {
   if (window.globalLevelControler === 0) {
@@ -16,12 +15,20 @@ reportButton.addEventListener("click", () => {
   }
 });
 
+// ! Level 1
+
+const levelOneSubmitBtn = document.getElementById("submitBtn");
 levelOneSubmitBtn.addEventListener("click", () => {
-  console.log(levelOneEmail.value);
-  console.log(levelOnePassword.value);
-  if (levelOneEmail === "" && levelOnePassword === "") {
-    console.log("Prohrál jsi");
+  const levelOneEmail = document.getElementById("emailInputLevel1").value;
+  const levelOnePassword = document.getElementById("passwordInputLevel1").value;
+
+  if (
+    levelOneEmail === window.glovalRandomEmail &&
+    levelOnePassword === window.globalRandomPassword
+  ) {
+    window.globalLevelControler = 1;
+    window.globalLevelOneStatus = false;
   } else {
-    console.log("Vyhrál jsi");
+    alert("Informace mimo hru - Zadali jste špatné údaje!");
   }
 });

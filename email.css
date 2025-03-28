@@ -378,6 +378,12 @@ strong {
   gap: 24px;
 }
 
+#loginFake form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 #loginFake input {
   height: 40px;
   border: 1px solid #ccc;
