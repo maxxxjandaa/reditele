@@ -3,10 +3,10 @@ const reportButton = document.getElementById("reportBtn");
 // !Report button
 
 reportButton.addEventListener("click", () => {
-  if (window.globalLevelControler === 0) {
-    window.globalLevelControler = 1;
+  if (window.globalLevelControler === 1) {
+    window.globalLevelControler = 2;
     window.globalLevelOneStatus = true;
-  } else if (window.globalLevelControler === 1) {
+  } else if (window.globalLevelControler === 3) {
     window.globalLevelControler = true;
     alert("Level 2 je hotový!");
   } else {

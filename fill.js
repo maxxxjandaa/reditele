@@ -158,24 +158,34 @@ window.onload = generateRandomData;
 //
 //
 //
+// const levelText = document.getElementById("levelText");
+// setInterval(function () {
+//   // Kontrola pro globalLevelControler
+//   if ((window.globalLevelOneStatus = true)) {
+//     const datesetLevelOne =
+//       "Objednal sis balíček #CZ847263 a netrpělivě čekáš na doručení. Najednou ti přijde e-mail, že se zásilka #CZ847263 ztratila a musíš zadat své údaje pro opětovné doručení. Zní to naléhavě, ale je to skutečné, nebo jen past? Dávej pozor a pokud máš podezření, raději e-mail nahlas!";
+//     levelText.innerHTML = datesetLevelOne;
+//   } else if (window.globalLevelTwoStatus == true) {
+//     const datesetLevelTwo = "Level 2 script";
+//     levelText.innerHTML = datesetLevelTwo;
+//   } else if (window.globalLevelThreeStatus == true) {
+//     const datesetLevelThree = "Level 3 script";
+//     levelText.innerHTML = datesetLevelThree;
+//   }
+// }, 200);
 
-const levelText = document.getElementById("levelText");
+// if (window.globalLevelControler == 0) {
+//   levelText.innerHTML = datesetLevelOne;
+// }
 
-const datesetLevelOne =
-  "Objednal sis balíček #CZ847263 a netrpělivě čekáš na doručení. Najednou ti přijde e-mail, že se zásilka #CZ847263 ztratila a musíš zadat své údaje pro opětovné doručení. Zní to naléhavě, ale je to skutečné, nebo jen past? Dávej pozor a pokud máš podezření, raději e-mail nahlas!";
-console.log(window.globalLevelControler);
-if (window.globalLevelControler == 0) {
-  levelText.innerHTML = datesetLevelOne;
-}
+// const copyButton = document.getElementById("closeLogin");
+// const loginFake = document.getElementById("loginFake");
+// copyButton.addEventListener("click", () => {
+//   loginFake.style.display = "none";
+// });
 
-const copyButton = document.getElementById("closeLogin");
-const loginFake = document.getElementById("loginFake");
-copyButton.addEventListener("click", () => {
-  loginFake.style.display = "none";
-});
+// const link = document.getElementById("link");
 
-const link = document.getElementById("link");
-
-link.addEventListener("click", () => {
-  loginFake.style.display = "flex";
-});
+// link.addEventListener("click", () => {
+//   loginFake.style.display = "flex";
+// });

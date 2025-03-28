@@ -6,6 +6,7 @@ let offsetX = 0,
   offsetY = 0,
   isDragging = false;
 
+// Přidání události pro dragHeader
 dragHeader.addEventListener("mousedown", (e) => {
   isDragging = true;
   // Calculate offset when the drag starts
@@ -15,7 +16,7 @@ dragHeader.addEventListener("mousedown", (e) => {
 
 document.addEventListener("mousemove", (e) => {
   if (isDragging) {
-    // Move the window based on mouse position
+    // Pohybuj oknem na základě pozice myši
     draggableWindow.style.left = `${e.clientX - offsetX}px`;
     draggableWindow.style.top = `${e.clientY - offsetY}px`;
   }
@@ -26,47 +27,32 @@ document.addEventListener("mouseup", () => {
 });
 // !Draggable Window maker end
 
-// !NewNemail Level 1
+// !NewEmail Level 1
 
-// !Email Send Handler
-
-// Ověření, zda globalLevelControler existuje a má hodnotu 0
-
-// Opakovaná kontrola každé 2 sekundy
-setInterval(function () {
-  if (window.globalLevelControler === 0) {
-    newEmail(1);
-  } else if (window.globalLevelControler === 1) {
-    newEmail(2);
-  } else {
-    newEmail(3);
-  }
-}, 2000);
-
-function newEmail(i) {
-  let newEmailHtml = document.getElementById("email" + i);
-  if (newEmailHtml) {
-    newEmailHtml.style.display = "flex";
-  }
-}
-
-// !Open message
-const newMessage = document.getElementById("email1");
-newMessage.addEventListener("click", () => {
-  draggableWindow.style.display = "block";
-});
-
-// ! Close message
-
-const closeMessage = document.getElementById("close");
-
-closeMessage.addEventListener("click", () => {
-  draggableWindow.style.display = "none";
-});
-
-// ! User Data
+// !User Data
 const userData = document.getElementById("info");
 
 userData.addEventListener("click", function () {
   userData.classList.toggle("active");
+});
+
+// !Open message
+const emailOne = document.getElementById("emailOne");
+const emailTwo = document.getElementById("emailTwo");
+const emailThree = document.getElementById("emailThree");
+
+const exitBtn = document.getElementById("close");
+
+emailOne.addEventListener("click", function () {
+  draggableWindow.style.display = "block";
+});
+emailTwo.addEventListener("click", function () {
+  draggableWindow.style.display = "block";
+});
+emailThree.addEventListener("click", function () {
+  draggableWindow.style.display = "block";
+});
+
+exitBtn.addEventListener("click", function () {
+  draggableWindow.style.display = "none";
 });
