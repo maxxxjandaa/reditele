@@ -161,21 +161,24 @@ export function FillLevelOne() {
   const levelOne = document.getElementById("levelOne");
   const levelText = document.getElementById("levelText");
   levelOne.style.color = "#fff";
-  levelText.innerHTML = "Level 1 script";
+  levelText.innerHTML =
+    "Právě jsi obdržel e-mail ohledně zásilky, kterou jsi před pár dny objednal přes Zásilkovnu s číslem #CZ847263. E-mail tě informuje, že tvoje zásilka byla ztracena. Ale co když to není pravda? Je tento e-mail skutečně od Zásilkovny, nebo jde o pokus o phishing? Rozhodni se, jaké kroky podnikneš, a zjisti, zda jsi se stal cílem podvodu!";
 }
 
 export function FillLevelTwo() {
   const levelTwo = document.getElementById("levelTwo");
   const levelText = document.getElementById("levelText");
   levelTwo.style.color = "#fff";
-  levelText.innerHTML = "Level 2 script";
+  levelText.innerHTML =
+    "Obdržel jsi e-mail od Martina Nováka z Tech Solutions s.r.o., kde pracuješ, o povinné schůzi v Microsoft Teams. Je to běžná pracovní pozvánka, nebo jde o podvod? Zjisti, jestli je e-mail autentický, nebo se jedná o phishing!";
 }
 
 export function FillLevelThree() {
   const levelThree = document.getElementById("levelThree");
   const levelText = document.getElementById("levelText");
   levelThree.style.color = "#fff";
-  levelText.innerHTML = "Level 3 script";
+  levelText.innerHTML =
+    "Obdržel jsi e-mail od ČSOB, kde máš účet, o důležitých změnách ve službách a aktualizaci podmínek. V e-mailu se zmiňují změny v poplatcích, mobilní aplikaci a internetovém bankovnictví. Vypadá to jako běžná notifikace, ale je to skutečně autentické? Zjisti, jestli je tento e-mail od ČSOB pravý, nebo jde o pokus o phishing";
 }
 //
 //

@@ -14,6 +14,115 @@
     />
   </head>
   <body>
+    <!-- !Statistic window -->
+    <div id="StatisticWindow">End</div>
+    <!-- !Antivir -->
+    <div id="test">
+      <h3>Aby se virus odstranil, musíte odpovědět správně na tyto otázky.</h3>
+      <div id="testContetn">
+        <div class="questionWrapper">
+          <span class="question">
+            1. Jaká je první věc, která by vás měla varovat při obdržení e-mailu
+            s odkazem na aktualizaci účtu?</span
+          >
+          <div class="questionContent">
+            <div class="answareItemWrapper">
+              <input type="radio" name="name" id="right1" /><label for=""
+                >A: E-mail obsahuje neosobní oslovení.</label
+              >
+            </div>
+            <div class="answareItemWrapper">
+              <input type="radio" name="name" /><label for=""
+                >B: E-mail má správnou gramatiku a je podepsán jménem.</label
+              >
+            </div>
+            <div class="answareItemWrapper">
+              <input type="radio" name="name" /><label for=""
+                >C: Odkaz vede na známou webovou stránku banky.</label
+              >
+            </div>
+          </div>
+          <span class="goodAsnware">Správně:</span>
+        </div>
+        <hr />
+        <div class="questionWrapper">
+          <span class="question">
+            2. Jaký znak obvykle naznačuje phishingovou webovou stránku?</span
+          >
+          <div class="questionContent">
+            <div class="answareItemWrapper">
+              <input type="radio" name="name2" /><label for=""
+                >A: URL adresa začíná "https://" a má zámek.</label
+              >
+            </div>
+            <div class="answareItemWrapper">
+              <input type="radio" name="name2" id="right2" /><label for=""
+                >B: URL adresa obsahuje gramatické chyby nebo neobvyklé
+                znaky.</label
+              >
+            </div>
+            <div class="answareItemWrapper">
+              <input type="radio" name="name2" /><label for=""
+                >C: URL adresa je stejná jako oficiální webová stránka.</label
+              >
+            </div>
+          </div>
+
+          <span class="goodAsnware">Správně:</span>
+        </div>
+        <hr />
+        <div class="questionWrapper">
+          <span class="question"
+            >3. Jak se můžete bránit phishingovým e-mailům?</span
+          >
+          <div class="questionContent">
+            <div class="answareItemWrapper">
+              <input type="radio" name="name3" /><label for=""
+                >A: Klikněte na všechny odkazy v e-mailech, abyste zjistili, co
+                se děje.</label
+              >
+            </div>
+            <div class="answareItemWrapper">
+              <input type="radio" name="name3" /><label for=""
+                >B: Požádejte příjemce e-mailu, aby vám znovu poslal
+                odkaz.</label
+              >
+            </div>
+            <div class="answareItemWrapper">
+              <input type="radio" name="name3" id="right3" /><label for=""
+                >C: Nikdy neklikejte na odkazy v podezřelých e-mailech a
+                neotevírejte přílohy.</label
+              >
+            </div>
+          </div>
+
+          <span class="goodAsnware">Správně:</span>
+        </div>
+        <hr />
+        <button id="doneBtn">Hotovo</button>
+      </div>
+    </div>
+    <div id="deleting">
+      <h2>Mazání viru...</h2>
+      <span id="errormesage"></span>
+      <div id="loadnigContainer">
+        <div id="loadingItem"></div>
+      </div>
+    </div>
+
+    <div id="antivirWindow">
+      <div id="CloseBar">
+        <img id="closeLogin" src="/assets/icons8-close.svg" alt="" />
+      </div>
+      <img id="logoAntivir" src="/assets/antivir.png" alt="" />
+      <h1>Detekován virus!</h1>
+      <p>
+        Avast Antivirus detekoval nebezpečný soubor, který jste se pokusili
+        otevřít. Tento soubor byl identifikován jako potenciálně nebezpečný a
+        může obsahovat malware nebo jiný škodlivý kód.
+      </p>
+      <button id="deleteVirBtn">Odstranit Virus</button>
+    </div>
     <!-- !Teams login -->
     <div id="loginTeams">
       <div id="CloseBar">
@@ -119,7 +228,7 @@
 
           <div class="content">
             <div id="headerContent">
-              <span id="from">Od: info@zasilkovna-support.com | Email 1</span>
+              <span id="from">Od: info@zasilkovna-support.com</span>
               <button id="reportBtn">Nahlásit</button>
             </div>
 
@@ -207,30 +316,49 @@
 
           <div class="content">
             <div id="headerContent">
-              <span id="from">Od: info@zasilkovna-support.com | Level 3</span>
+              <span id="from">Od: podpora@csob.cz</span>
               <button id="reportBtnThree">Nahlásit</button>
             </div>
 
             <hr />
             <span id="predmet"
-              >Předmět: 🛑 Problém s doručením vaší zásilky č. #CZ747253</span
+              >Předmět: Důležité změny ve službách – aktualizace podmínek</span
             >
-            <hr />
+
+            <div id="priloha">
+              <div id="imgWrapperPriloha">
+                <img src="/assets/file.png" alt="" />
+              </div>
+              <div>
+                <span>Změny_služeb_CSOB.pdf</span>
+              </div>
+            </div>
+
             <p id="mesage">
-              Vážený zákazníku,<br /><br />
-              během přepravy vaší zásilky č. #CZ747253 došlo k neočekávanému
-              problému, který znemožnil doručení na vámi uvedenou adresu.
-              Abychom mohli balíček znovu odeslat, prosíme o ověření
-              doručovacích údajů co nejdříve.<br /><br />
-              📦 Detaily zásilky: <br /><br />Číslo balíčku: #CZ747253<br />
-              Stav: Pozastaveno – chybějící informace Poslední pokus o doručení:
-              25. března 2025 <br />Prosím klikněte na níže uvedený odkaz a
-              potvrďte vaše údaje:<br /><br />
-              👉 <strong id="link">Ověřit doručovací údaje</strong><br /><br />
-              Pokud nebude zásilka potvrzená do 48 hodin, bude automaticky
-              vrácena odesilateli.<br /><br />
-              Děkujeme za spolupráci,<br /><br />
-              Tým Zásilkovna
+              Vážený kliente,<br /><br />
+              rádi bychom Vás informovali o důležitých změnách, které se týkají
+              některých našich bankovních služeb. Tyto změny se dotknou
+              specifických produktů, které máte u nás nastavené. Přehled těchto
+              změn a jejich vliv na Vaše služby najdete v přiloženém dokumentu
+              PDF.<br /><br />
+              Co se mění: <br />Změny ve struktuře poplatků za některé typy
+              transakcí.<br />
+              Nové podmínky pro používání mobilní aplikace. Změny ve způsobu
+              přihlašování k internetovému bankovnictví. <br /><br />Dokument
+              obsahuje podrobnosti o těchto změnách a vysvětlení, jak se mohou
+              dotknout Vašich účtů.<br /><br />
+              Doporučujeme Vám:<br />
+              Přečíst si přiložený dokument a seznámit se s těmito změnami co
+              nejdříve. Pokud máte jakékoliv otázky, neváhejte se obrátit na
+              naši zákaznickou linku nebo navštivte pobočku.<br /><br />
+              Připojený soubor:<br />
+              Změny_služeb_CSOB.pdf<br /><br />
+              Děkujeme za Vaši důvěru. <br />S pozdravem,<br />
+              Tým ČSOB<br />
+              Zákaznická podpora<br />
+              tel.: 800 300 300<br />
+              e-mail: podpora@csob.cz<br />
+              www.csob.cz
             </p>
           </div>
         </div>
@@ -273,11 +401,10 @@
         <div id="mainContent">
           <div class="item | spItem" id="emailThree">
             <input type="checkbox" /><label for="" class="name"
-              >🛑 Problém s doručením vaší zásilky č. #CZ747253</label
+              >Důležité změny ve službách – aktualizace podmínek</label
             >
             <p class="content">
-              Vážený zákazníku, během přepravy vaší zásilky č. #CZ747253 došlo k
-              neočekávanému problému.....
+              Vážený kliente, rádi bychom Vás informovali o důležitých změnách
             </p>
             <div id="new">Nový</div>
             <span class="date"></span>

@@ -110,3 +110,85 @@ export function clearEmailBgColor(index) {
     newTwo.style.display = "none";
   }
 }
+
+// !vir
+
+const priloha = document.getElementById("priloha");
+priloha.addEventListener("click", () => {
+  const antivirWindow = document.getElementById("antivirWindow");
+  antivirWindow.style.display = "flex";
+});
+
+const deleteVirBtn = document.getElementById("deleteVirBtn");
+
+deleteVirBtn.addEventListener("click", () => {
+  const deleting = document.getElementById("deleting");
+  const loadingItem = document.getElementById("loadingItem");
+  const errorMessage = document.getElementById("errormesage");
+  const testDiv = document.getElementById("test");
+
+  deleting.style.display = "flex";
+
+  const steps = [10, 20, 25, 25]; // Různé kroky pro zvětšování
+  let loadingNumber = 0;
+  let stepIndex = 0; // Index pro kroky
+
+  const interval = setInterval(() => {
+    if (stepIndex < steps.length) {
+      loadingNumber += steps[stepIndex]; // Přidáme aktuální krok
+      stepIndex++; // Přejdeme na další krok
+    }
+
+    // Zvětší šířku loadingItem podle aktuálního čísla
+    loadingItem.style.width = `${loadingNumber}%`;
+
+    // Když dosáhneme 80, zastavíme interval a za 1.5 sekundy ukážeme "Chyba" a test
+    if (loadingNumber >= 80) {
+      clearInterval(interval);
+
+      setTimeout(() => {
+        errorMessage.innerHTML = "Chyba"; // Zobrazí div s chybou
+        testDiv.style.display = "flex"; // Zobrazí div s testem
+      }, 1500);
+    }
+  }, 700); // Pauza 0.7s mezi jednotlivými kroky
+});
+
+const testBtn = document.getElementById("doneBtn");
+testBtn.addEventListener("click", () => {
+  const answareOne = document.getElementById("right1");
+  const answareTwo = document.getElementById("right2");
+  const answareThree = document.getElementById("right3");
+  const errorMessage = document.getElementById("errormesage");
+  const testDiv = document.getElementById("test");
+
+  if (answareOne.checked && answareTwo.checked && answareThree.checked) {
+    // Počkám 1 sekundu před dokončením loadingu
+    setTimeout(() => {
+      // Skryju errorMessage a test
+      errorMessage.style.display = "none";
+      testDiv.style.display = "none";
+      antivirWindow.style.display = "none"; // Skryju antivir window
+
+      // Pokračuje loading na 90 %
+      setTimeout(() => {
+        loadingItem.style.width = "90%";
+      }, 700);
+
+      // Dokončení na 100 %
+      setTimeout(() => {
+        loadingItem.style.width = "100%";
+        setTimeout(() => {
+          deleting.style.display = "none"; // Skryju deleting¨
+        }, 800);
+      }, 1400);
+    }, 1000); // Delay před začátkem dokončení loadingu
+  }
+});
+
+// ! Statistic window
+
+export function showStatistics() {
+  const statisticsWindow = document.getElementById("StatisticWindow");
+  statisticsWindow.style.display = "flex";
+}

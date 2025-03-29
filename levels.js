@@ -2,6 +2,7 @@ import { FillLevelThree, FillLevelTwo } from "/fill.js";
 import { FillLevelOne, goodEndingIcon, badEndingIcon } from "/fill.js";
 import { closeAllWindows } from "/windows.js";
 import { clearEmailBgColor } from "/windows.js";
+import { showStatistics } from "/windows.js";
 
 const Obnos = document.getElementById("Obnos");
 let money = 1000;
@@ -82,6 +83,9 @@ reportButtonThree.addEventListener("click", () => {
   if (globalLevelControler === 3) {
     globalLevelControler = 4;
     globalLevelThreeStatus = true; //GOOD ENDING
+    goodEndingIcon(3);
+    showStatistics();
+    closeAllWindows();
   }
 });
 
