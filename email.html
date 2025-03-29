@@ -15,6 +15,12 @@
   </head>
   <body>
     <!-- !User data -->
+    <div class="endwindow" id="goodEndWindow">
+      <img src="/assets/approved.png" alt="" />
+    </div>
+    <div class="endwindow" id="badEndWindow">
+      <img src="/assets/canceldENd.png" alt="" />
+    </div>
 
     <div id="info">
       <h1>Vaše údaje</h1>
@@ -29,7 +35,7 @@
         <div id="infoCardWrapper">
           <div>
             <span>Obnos:</span>
-            <span class="small" id="Obnos">100 000 Kč</span>
+            <span class="small" id="Obnos"></span>
           </div>
           <div>
             <span>Číslo účtu:</span>
@@ -71,7 +77,11 @@
       </div>
       <div id="main">
         <!-- ! Email/Level 1 -->
-        <div class="window draggableWindow" style="position: absolute">
+        <div
+          class="window draggableWindow"
+          id="draggableWindow"
+          style="position: absolute"
+        >
           <div id="wrapp">
             <div class="header dragHeader">
               <span>Nová zpráva</span>
@@ -83,7 +93,93 @@
 
           <div class="content">
             <div id="headerContent">
-              <span id="from">Od: info@zasilkovna-support.com</span>
+              <span id="from">Od: info@zasilkovna-support.com | Email 1</span>
+              <button id="reportBtn">Nahlásit</button>
+            </div>
+
+            <hr />
+            <span id="predmet"
+              >Předmět: 🛑 Problém s doručením vaší zásilky č. #CZ747253</span
+            >
+            <hr />
+            <p id="mesage">
+              Vážený zákazníku,<br /><br />
+              během přepravy vaší zásilky č. #CZ747253 došlo k neočekávanému
+              problému, který znemožnil doručení na vámi uvedenou adresu.
+              Abychom mohli balíček znovu odeslat, prosíme o ověření
+              doručovacích údajů co nejdříve.<br /><br />
+              📦 Detaily zásilky: <br /><br />Číslo balíčku: #CZ747253<br />
+              Stav: Pozastaveno – chybějící informace Poslední pokus o doručení:
+              25. března 2025 <br />Prosím klikněte na níže uvedený odkaz a
+              potvrďte vaše údaje:<br /><br />
+              👉 <strong id="link">Ověřit doručovací údaje</strong><br /><br />
+              Pokud nebude zásilka potvrzená do 48 hodin, bude automaticky
+              vrácena odesilateli.<br /><br />
+              Děkujeme za spolupráci,<br /><br />
+              Tým Zásilkovna
+            </p>
+          </div>
+        </div>
+        <div
+          class="window draggableWindow"
+          id="draggableWindowTwo"
+          style="position: absolute"
+        >
+          <div id="wrapp">
+            <div class="header dragHeader">
+              <span>Nová zpráva</span>
+              <div id="editables">
+                <img id="close" src="/assets/icons8-close.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="content">
+            <div id="headerContent">
+              <span id="from">Od: info@zasilkovna-support.com | Level 2</span>
+              <button id="reportBtn">Nahlásit</button>
+            </div>
+
+            <hr />
+            <span id="predmet"
+              >Předmět: 🛑 Problém s doručením vaší zásilky č. #CZ747253</span
+            >
+            <hr />
+            <p id="mesage">
+              Vážený zákazníku,<br /><br />
+              během přepravy vaší zásilky č. #CZ747253 došlo k neočekávanému
+              problému, který znemožnil doručení na vámi uvedenou adresu.
+              Abychom mohli balíček znovu odeslat, prosíme o ověření
+              doručovacích údajů co nejdříve.<br /><br />
+              📦 Detaily zásilky: <br /><br />Číslo balíčku: #CZ747253<br />
+              Stav: Pozastaveno – chybějící informace Poslední pokus o doručení:
+              25. března 2025 <br />Prosím klikněte na níže uvedený odkaz a
+              potvrďte vaše údaje:<br /><br />
+              👉 <strong id="link">Ověřit doručovací údaje</strong><br /><br />
+              Pokud nebude zásilka potvrzená do 48 hodin, bude automaticky
+              vrácena odesilateli.<br /><br />
+              Děkujeme za spolupráci,<br /><br />
+              Tým Zásilkovna
+            </p>
+          </div>
+        </div>
+        <div
+          class="window draggableWindow"
+          id="draggableWindowThree"
+          style="position: absolute"
+        >
+          <div id="wrapp">
+            <div class="header dragHeader">
+              <span>Nová zpráva</span>
+              <div id="editables">
+                <img id="close" src="/assets/icons8-close.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="content">
+            <div id="headerContent">
+              <span id="from">Od: info@zasilkovna-support.com | Level 3</span>
               <button id="reportBtn">Nahlásit</button>
             </div>
 
@@ -137,7 +233,7 @@
         </div>
 
         <img src="/assets/Snímek obrazovky 2025-03-26 175050.png" alt="" />
-        <!-- 
+        <!--
         
 
 
@@ -757,6 +853,5 @@
     <script type="module" src="fill.js"></script>
     <script type="module" src="ending.js"></script>
     <script type="module" src="windows.js"></script>
-    <script type="module" src="dataCatcher.js"></script>
   </body>
 </html>

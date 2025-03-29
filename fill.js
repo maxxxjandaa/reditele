@@ -152,40 +152,68 @@ window.onload = generateRandomData;
 //
 //
 //
-//
-// ! Level script fill
-//
-//
+// !Level color fill script
+// !Level script
 //
 //
-// const levelText = document.getElementById("levelText");
-// setInterval(function () {
-//   // Kontrola pro globalLevelControler
-//   if ((window.globalLevelOneStatus = true)) {
-//     const datesetLevelOne =
-//       "Objednal sis balíček #CZ847263 a netrpělivě čekáš na doručení. Najednou ti přijde e-mail, že se zásilka #CZ847263 ztratila a musíš zadat své údaje pro opětovné doručení. Zní to naléhavě, ale je to skutečné, nebo jen past? Dávej pozor a pokud máš podezření, raději e-mail nahlas!";
-//     levelText.innerHTML = datesetLevelOne;
-//   } else if (window.globalLevelTwoStatus == true) {
-//     const datesetLevelTwo = "Level 2 script";
-//     levelText.innerHTML = datesetLevelTwo;
-//   } else if (window.globalLevelThreeStatus == true) {
-//     const datesetLevelThree = "Level 3 script";
-//     levelText.innerHTML = datesetLevelThree;
+
+export function FillLevelOne() {
+  const levelOne = document.getElementById("levelOne");
+  const levelText = document.getElementById("levelText");
+  levelOne.style.color = "#fff";
+  levelText.innerHTML = "Level 1 script";
+}
+
+export function FillLevelTwo() {
+  const levelTwo = document.getElementById("levelTwo");
+  const levelText = document.getElementById("levelText");
+  levelTwo.style.color = "#fff";
+  levelText.innerHTML = "Level 2 script";
+}
+
+export function FillLevelThree() {
+  const levelThree = document.getElementById("levelThree");
+  const levelText = document.getElementById("levelText");
+  levelThree.style.color = "#fff";
+  levelText.innerHTML = "Level 3 script";
+}
+//
+//
+//  !!Ending handler Level 1
+//
+//
+export function goodEndingLevelOne() {
+  const icontrue = document.getElementById("icontrue");
+  const goodEndWindow = document.getElementById("goodEndWindow");
+  icontrue.style.display = "block";
+  goodEndWindow.style.display = "flex";
+  setTimeout(function () {
+    goodEndWindow.style.display = "none";
+  }, 700);
+}
+
+export function badEndingLevelOne() {
+  const iconfalse = document.getElementById("iconfalse");
+  const badEndWindow = document.getElementById("badEndWindow");
+  iconfalse.style.display = "block";
+  badEndWindow.style.display = "flex";
+  setTimeout(function () {
+    badEndWindow.style.display = "none";
+  }, 700);
+}
+
+// const levelOneSubmitBtn = document.getElementById("submitBtn");
+// levelOneSubmitBtn.addEventListener("click", () => {
+//   const levelOneEmail = document.getElementById("emailInputLevel1").value;
+//   const levelOnePassword = document.getElementById("passwordInputLevel1").value;
+
+//   if (
+//     levelOneEmail === window.glovalRandomEmail &&
+//     levelOnePassword === window.globalRandomPassword
+//   ) {
+//     window.globalLevelControler = 1;
+//     window.globalLevelOneStatus = false;
+//   } else {
+//     alert("Informace mimo hru - Zadali jste špatné údaje!");
 //   }
-// }, 200);
-
-// if (window.globalLevelControler == 0) {
-//   levelText.innerHTML = datesetLevelOne;
-// }
-
-// const copyButton = document.getElementById("closeLogin");
-// const loginFake = document.getElementById("loginFake");
-// copyButton.addEventListener("click", () => {
-//   loginFake.style.display = "none";
-// });
-
-// const link = document.getElementById("link");
-
-// link.addEventListener("click", () => {
-//   loginFake.style.display = "flex";
 // });
