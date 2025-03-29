@@ -14,6 +14,30 @@
     />
   </head>
   <body>
+    <!-- !Teams login -->
+    <div id="loginTeams">
+      <div id="CloseBar">
+        <img id="closeLogin" src="/assets/icons8-close.svg" alt="" />
+      </div>
+      <img src="/assets/teams.png" alt="" />
+      <h1>Přihlášení</h1>
+      <form action="">
+        <input
+          type="email"
+          placeholder="E-mail"
+          id="emailInputLevel2"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Heslo"
+          id="passwordInputLevel2"
+          required
+        />
+        <button id="submitBtnTeams">Odeslat</button>
+      </form>
+    </div>
+
     <!-- !User data -->
     <div class="endwindow" id="goodEndWindow">
       <img src="/assets/approved.png" alt="" />
@@ -56,18 +80,20 @@
           <h1>Status</h1>
           <div class="levels">
             <h5 id="levelOne">Level 1</h5>
-            <img id="icontrue" src="/assets/mark.png" alt="" />
-            <img id="iconfalse" src="/assets/canceld.png" alt="" />
+            <img id="icontrue1" src="/assets/mark.png" alt="" />
+            <img id="iconfalse1" src="/assets/canceld.png" alt="" />
           </div>
           <div class="pipe"></div>
           <div class="levels">
             <h5 id="levelTwo">Level 2</h5>
-            <!-- <img  src="/assets/mark.png" alt="" /> -->
+            <img id="icontrue2" src="/assets/mark.png" alt="" />
+            <img id="iconfalse2" src="/assets/canceld.png" alt="" />
           </div>
           <div class="pipe"></div>
           <div class="levels">
             <h5 id="levelThree">Level 3</h5>
-            <!-- <img src="/assets/mark.png" alt="" /> -->
+            <img id="icontrue3" src="/assets/mark.png" alt="" />
+            <img id="iconfalse3" src="/assets/canceld.png" alt="" />
           </div>
         </div>
         <div id="scenar">
@@ -136,30 +162,32 @@
 
           <div class="content">
             <div id="headerContent">
-              <span id="from">Od: info@zasilkovna-support.com | Level 2</span>
-              <button id="reportBtn">Nahlásit</button>
+              <span id="from">Od: martin.novak@techsolutions.cz</span>
+              <button id="reportBtnTwo">Nahlásit</button>
             </div>
 
             <hr />
             <span id="predmet"
-              >Předmět: 🛑 Problém s doručením vaší zásilky č. #CZ747253</span
+              >Předmět: Povinná schůze v Teams – důležité informace</span
             >
             <hr />
             <p id="mesage">
-              Vážený zákazníku,<br /><br />
-              během přepravy vaší zásilky č. #CZ747253 došlo k neočekávanému
-              problému, který znemožnil doručení na vámi uvedenou adresu.
-              Abychom mohli balíček znovu odeslat, prosíme o ověření
-              doručovacích údajů co nejdříve.<br /><br />
-              📦 Detaily zásilky: <br /><br />Číslo balíčku: #CZ747253<br />
-              Stav: Pozastaveno – chybějící informace Poslední pokus o doručení:
-              25. března 2025 <br />Prosím klikněte na níže uvedený odkaz a
-              potvrďte vaše údaje:<br /><br />
-              👉 <strong id="link">Ověřit doručovací údaje</strong><br /><br />
-              Pokud nebude zásilka potvrzená do 48 hodin, bude automaticky
-              vrácena odesilateli.<br /><br />
-              Děkujeme za spolupráci,<br /><br />
-              Tým Zásilkovna
+              Dobrý den,<br /><br />
+
+              rád bych vás pozval na povinnou online schůzi, která proběhne 1.
+              dubna v 15:00 v Microsoft Teams. Na této schůzi budeme řešit
+              aktuální projekty, klíčové úkoly na následující období a důležité
+              organizační změny. Vaše účast je nezbytná, proto vás žádám, abyste
+              si na schůzi vyhradili čas.<br /><br />
+              <strong id="linkTeams">Odkaz na připojení</strong><br /><br />
+              Prosím, připojte se včas a připravte si případné dotazy nebo
+              podklady, které by mohly být relevantní k tématům schůze. Pokud
+              byste se z vážných důvodů nemohli zúčastnit, informujte mě co
+              nejdříve. <br /><br />Děkuji za spolupráci a těším se na
+              setkání.<br />
+              S pozdravem, <br />Martin Novák<br />
+              Vedoucí oddělení<br />
+              Tech Solutions s.r.o.
             </p>
           </div>
         </div>
@@ -180,7 +208,7 @@
           <div class="content">
             <div id="headerContent">
               <span id="from">Od: info@zasilkovna-support.com | Level 3</span>
-              <button id="reportBtn">Nahlásit</button>
+              <button id="reportBtnThree">Nahlásit</button>
             </div>
 
             <hr />
@@ -256,13 +284,12 @@
           </div>
           <div class="item | spItem" id="emailTwo">
             <input type="checkbox" /><label for="" class="name"
-              >🛑 Problém s asdasdasdasdasdas vaší zásilky č. #CZ847263</label
+              >Povinná schůze v Teams – důležité informace</label
             >
             <p class="content">
-              Vážený zákazníku, během přepravy vaší zásilky č. #CZ847263 došlo k
-              neočekávanému problému.....
+              Dobrý den, rád bych vás pozval na povinnou online schůzi....
             </p>
-            <div id="new">Nový</div>
+            <div id="new" class="newTwo">Nový</div>
             <span class="date"></span>
           </div>
           <div class="item | spItem" id="emailOne">
@@ -273,7 +300,7 @@
               Vážený zákazníku, během přepravy vaší zásilky č. #CZ747253 došlo k
               neočekávanému problému.....
             </p>
-            <div id="new">Nový</div>
+            <div id="new" class="newOne">Nový</div>
             <span class="date"></span>
           </div>
           <!-- 

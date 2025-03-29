@@ -363,7 +363,8 @@ strong {
   line-height: 1.5em;
 }
 
-#loginFake {
+#loginFake,
+#loginTeams {
   background-color: #f0f0f0;
   display: none;
   flex-direction: column;
@@ -378,13 +379,15 @@ strong {
   gap: 24px;
 }
 
-#loginFake form {
+#loginFake form,
+#loginTeams form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-#loginFake input {
+#loginFake input,
+#loginTeams input {
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -392,7 +395,8 @@ strong {
   padding: 8px;
 }
 
-#loginFake button {
+#loginFake button,
+#loginTeams button {
   height: 40px;
   background-color: #ccc;
   border: none;

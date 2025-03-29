@@ -182,8 +182,9 @@ export function FillLevelThree() {
 //  !!Ending handler Level 1
 //
 //
-export function goodEndingLevelOne() {
-  const icontrue = document.getElementById("icontrue");
+export function goodEndingIcon(element) {
+  console.log(element);
+  const icontrue = document.getElementById("icontrue" + element);
   const goodEndWindow = document.getElementById("goodEndWindow");
   icontrue.style.display = "block";
   goodEndWindow.style.display = "flex";
@@ -192,8 +193,8 @@ export function goodEndingLevelOne() {
   }, 700);
 }
 
-export function badEndingLevelOne() {
-  const iconfalse = document.getElementById("iconfalse");
+export function badEndingIcon(element) {
+  const iconfalse = document.getElementById("iconfalse" + element);
   const badEndWindow = document.getElementById("badEndWindow");
   iconfalse.style.display = "block";
   badEndWindow.style.display = "flex";

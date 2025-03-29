@@ -1,6 +1,7 @@
 import { FillLevelThree, FillLevelTwo } from "/fill.js";
-import { FillLevelOne, goodEndingLevelOne, badEndingLevelOne } from "/fill.js";
+import { FillLevelOne, goodEndingIcon, badEndingIcon } from "/fill.js";
 import { closeAllWindows } from "/windows.js";
+import { clearEmailBgColor } from "/windows.js";
 
 const Obnos = document.getElementById("Obnos");
 let money = 1000;
@@ -28,20 +29,16 @@ const emailTwo = document.getElementById("emailTwo");
 const emailThree = document.getElementById("emailThree");
 
 window.addEventListener("load", () => {
-  console.log("Page loaded! email one send");
   globalLevelControler = 1;
   emailOne.style.display = "flex";
-  globalLevelOneStatus = true;
   FillLevelOne();
 });
 
 setInterval(function () {
   if (globalLevelControler == 2) {
     emailTwo.style.display = "flex";
-    FillLevelTwo();
   } else if (globalLevelControler == 3) {
     emailThree.style.display = "flex";
-    FillLevelThree();
   }
 }, 2000);
 
@@ -54,6 +51,8 @@ setInterval(function () {
 //
 
 const reportButton = document.getElementById("reportBtn");
+const reportButtonTwo = document.getElementById("reportBtnTwo");
+const reportButtonThree = document.getElementById("reportBtnThree");
 
 // !Report button
 
@@ -62,14 +61,27 @@ reportButton.addEventListener("click", () => {
     globalLevelControler = 2;
     globalLevelOneStatus = true; //GOOD ENDING
     FillLevelTwo();
-    goodEndingLevelOne();
+    goodEndingIcon(1);
     closeAllWindows();
-  } else if (globalLevelControler === 3) {
-    globalLevelControler = true;
-    alert("Level 2 je hotový!");
-  } else {
-    globalLevelControler = true;
-    alert("Level 3 je hotový!");
+    clearEmailBgColor(1);
+  }
+});
+reportButtonTwo.addEventListener("click", () => {
+  if (globalLevelControler === 2) {
+    globalLevelControler = 3;
+    globalLevelTwoStatus = false; //BAD ENDING
+    FillLevelThree();
+    badEndingIcon(2);
+    closeAllWindows();
+    clearEmailBgColor(2);
+    decraseMoeny();
+  }
+});
+
+reportButtonThree.addEventListener("click", () => {
+  if (globalLevelControler === 3) {
+    globalLevelControler = 4;
+    globalLevelThreeStatus = true; //GOOD ENDING
   }
 });
 
@@ -88,9 +100,10 @@ submitBtn.addEventListener("click", () => {
     globalLevelControler = 2;
     globalLevelOneStatus = false; //BAD ENDING
     FillLevelTwo();
-    badEndingLevelOne();
+    badEndingIcon(1);
     decraseMoeny();
     closeAllWindows();
+    clearEmailBgColor(1);
   } else {
     alert(
       "Informace mimo hru – Zadali jste špatné údaje! Musíte zadat uživatelské jméno a heslo, které najdete ve vašich údajích vpravo dole!"
@@ -102,3 +115,28 @@ function decraseMoeny() {
   money -= 250;
   Obnos.innerHTML = money + " Kč";
 }
+
+// ! Level 2
+
+const submitBtnTeams = document.getElementById("submitBtnTeams");
+submitBtnTeams.addEventListener("click", () => {
+  const emailInputLevel2 = document.getElementById("emailInputLevel2");
+  const passwordInputLevel2 = document.getElementById("passwordInputLevel2");
+  if (
+    // emailInputLevel1.value === window.glovalRandomEmail &&
+    // passwordInputLevel1.value === window.globalRandomPassword
+    emailInputLevel2.value === "ahoj" &&
+    passwordInputLevel2.value === "ahoj"
+  ) {
+    globalLevelControler = 3;
+    globalLevelOneStatus = true; //BAD ENDING
+    FillLevelThree();
+    goodEndingIcon(2);
+    closeAllWindows();
+    clearEmailBgColor(2);
+  } else {
+    alert(
+      "Informace mimo hru – Zadali jste špatné údaje! Musíte zadat uživatelské jméno a heslo, které najdete ve vašich údajích vpravo dole!"
+    );
+  }
+});

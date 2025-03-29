@@ -63,6 +63,9 @@ const draggableWindow = document.getElementById("draggableWindow");
 const draggableWindowTwo = document.getElementById("draggableWindowTwo");
 const draggableWindowThree = document.getElementById("draggableWindowThree");
 
+const newOne = document.querySelector(".newOne");
+const newTwo = document.querySelector(".newTwo");
+
 emailOne.addEventListener("click", function () {
   draggableWindow.style.display = "block";
 });
@@ -73,6 +76,8 @@ emailThree.addEventListener("click", function () {
   draggableWindowThree.style.display = "block";
 });
 
+// !LOgin level one
+
 const linkLevelOne = document.getElementById("link");
 
 linkLevelOne.addEventListener("click", () => {
@@ -80,9 +85,28 @@ linkLevelOne.addEventListener("click", () => {
   loginFake.style.display = "flex";
 });
 
+// !LOgin level two
+
+const linkTeams = document.getElementById("linkTeams");
+linkTeams.addEventListener("click", () => {
+  const loginTeams = document.getElementById("loginTeams");
+  loginTeams.style.display = "flex";
+});
+
 export function closeAllWindows() {
   loginFake.style.display = "none";
+  loginTeams.style.display = "none";
   draggableWindow.style.display = "none";
   draggableWindowTwo.style.display = "none";
   draggableWindowThree.style.display = "none";
+}
+
+export function clearEmailBgColor(index) {
+  if (index === 1) {
+    emailOne.style.backgroundColor = "transparent";
+    newOne.style.display = "none";
+  } else {
+    emailTwo.style.backgroundColor = "transparent";
+    newTwo.style.display = "none";
+  }
 }
