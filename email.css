@@ -121,12 +121,50 @@ body {
   flex-direction: column;
   gap: 24px;
   z-index: 10;
-  cursor: pointer;
   padding: 24px;
 }
 
 #info.active {
   bottom: 0;
+}
+
+#closeLoginInfo.rotate {
+  transform: rotate(180deg);
+  transition-duration: 0.3s;
+}
+
+#topContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+#closaBtnInfo {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#closaBtnInfo:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#closeLoginInfo {
+  height: 24px;
+  width: 24px;
+  rotate: -90deg;
+}
+
+#closeLoginInfo.rotate {
+  transform: rotate(180deg);
+  transition-duration: 0.3s;
 }
 
 #info h1 {

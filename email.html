@@ -345,7 +345,7 @@
       <button id="deleteVirBtn">Odstranit Virus</button>
     </div>
     <!-- !Teams login -->
-    <div id="loginTeams">
+    <div id="loginTeams" class="modal">
       <div id="CloseBar">
         <img id="closeLogin" src="/assets/icons8-close.svg" alt="" />
       </div>
@@ -377,7 +377,14 @@
     </div>
 
     <div id="info">
-      <h1>Vaše údaje</h1>
+      <div id="topContainer">
+        <button id="closaBtnInfo">
+          <img id="closeLoginInfo" src="/assets/arrow.png" alt="" />
+        </button>
+        <h1>Vaše údaje</h1>
+        .
+      </div>
+
       <hr />
       <span id="name"></span>
       <span id="surname"></span>
@@ -586,7 +593,7 @@
 
         <!-- !Login Fake Level 1 -->
 
-        <div id="loginFake">
+        <div id="loginFake" class="modal">
           <div id="CloseBar">
             <img id="closeLogin" src="/assets/icons8-close.svg" alt="" />
           </div>

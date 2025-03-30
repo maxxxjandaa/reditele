@@ -49,9 +49,12 @@ document.querySelectorAll(".draggableWindow").forEach((draggableWindow) => {
 //
 // !User Data
 const userData = document.getElementById("info");
+const closaBtnInfo = document.getElementById("closaBtnInfo");
+const closeLoginInfo = document.getElementById("closeLoginInfo");
 
-userData.addEventListener("click", function () {
+closaBtnInfo.addEventListener("click", function () {
   userData.classList.toggle("active");
+  closeLoginInfo.classList.toggle("rotate");
 });
 //
 //
