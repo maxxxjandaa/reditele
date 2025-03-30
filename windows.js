@@ -1,5 +1,6 @@
 import { thisisGoodTestEnd } from "/levels.js";
 import { thisiusBadTestEnd } from "/levels.js";
+import { makeEndingText } from "/levels.js";
 
 // !Draggable Window maker
 document.querySelectorAll(".draggableWindow").forEach((draggableWindow) => {
@@ -199,5 +200,68 @@ testBtn.addEventListener("click", () => {
 
 export function showStatistics() {
   const statisticsWindow = document.getElementById("StatisticWindow");
-  statisticsWindow.style.display = "flex";
+  statisticsWindow.style.display = "flex"; // Zobrazí okno statistik jako flex
+  makeEndingText();
 }
+
+// Zajistí, že při načtení stránky nebo změně velikosti okna se objekt správně umístí
+
+const navItemOne = document.getElementById("navItemOne");
+const navItemTwo = document.getElementById("navItemTwo");
+const navItemThree = document.getElementById("navItemThree");
+
+const levelStatusStytisicText = document.getElementById(
+  "levelStatusStytisicText"
+);
+const levelStatusStytisic = document.getElementById("levelStatusStytisic");
+
+navItemOne.addEventListener("click", () => {
+  const statisticOne = document.getElementById("contenOne");
+  const statisticTwo = document.getElementById("contenTwo");
+  const statisticThree = document.getElementById("contenThree");
+
+  navItemOne.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+  navItemTwo.style.backgroundColor = "transparent";
+  navItemThree.style.backgroundColor = "transparent";
+
+  levelStatusStytisicText.innerHTML = "E-mail 1 byl falešný!";
+  levelStatusStytisic.style.backgroundColor = "red";
+
+  statisticOne.style.display = "flex";
+  statisticTwo.style.display = "none";
+  statisticThree.style.display = "none";
+});
+
+navItemTwo.addEventListener("click", () => {
+  const statisticOne = document.getElementById("contenOne");
+  const statisticTwo = document.getElementById("contenTwo");
+  const statisticThree = document.getElementById("contenThree");
+
+  navItemOne.style.backgroundColor = "transparent";
+  navItemTwo.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+  navItemThree.style.backgroundColor = "transparent";
+
+  levelStatusStytisicText.innerHTML = "E-mail 2 byl reálný!";
+  levelStatusStytisic.style.backgroundColor = "#bada55";
+
+  statisticOne.style.display = "none";
+  statisticTwo.style.display = "flex";
+  statisticThree.style.display = "none";
+});
+
+navItemThree.addEventListener("click", () => {
+  const statisticOne = document.getElementById("contenOne");
+  const statisticTwo = document.getElementById("contenTwo");
+  const statisticThree = document.getElementById("contenThree");
+
+  levelStatusStytisicText.innerHTML = "E-mail 3 byl falešný!";
+  levelStatusStytisic.style.backgroundColor = "red";
+
+  navItemOne.style.backgroundColor = "transparent";
+  navItemTwo.style.backgroundColor = "transparent";
+  navItemThree.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+
+  statisticOne.style.display = "none";
+  statisticTwo.style.display = "none";
+  statisticThree.style.display = "flex";
+});

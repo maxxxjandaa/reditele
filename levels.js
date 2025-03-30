@@ -133,7 +133,7 @@ submitBtnTeams.addEventListener("click", () => {
     passwordInputLevel2.value === "ahoj"
   ) {
     globalLevelControler = 3;
-    globalLevelOneStatus = true; //BAD ENDING
+    globalLevelTwoStatus = true; //BAD ENDING
     FillLevelThree();
     goodEndingIcon(2);
     closeAllWindows();
@@ -153,6 +153,7 @@ export function thisisGoodTestEnd() {
   goodEndingIcon(3);
   closeAllWindows();
   showStatistics();
+  globalLevelThreeStatus = true; //GOOD ENDING
 }
 
 export function thisiusBadTestEnd() {
@@ -160,4 +161,25 @@ export function thisiusBadTestEnd() {
   decraseMoeny();
   closeAllWindows();
   showStatistics();
+  globalLevelThreeStatus = false; //BAD ENDING
+}
+
+export function makeEndingText() {
+  if (globalLevelOneStatus) {
+    document.getElementById("textPoleOne").innerHTML = "Jste zvládl.";
+  } else {
+    document.getElementById("textPoleOne").innerHTML = "Se Vám nepodařil.";
+  }
+
+  if (globalLevelTwoStatus) {
+    document.getElementById("textPoleTwo").innerHTML = "Jste zvládl.";
+  } else {
+    document.getElementById("textPoleTwo").innerHTML = "Se Vám nepodařil.";
+  }
+
+  if (globalLevelThreeStatus) {
+    document.getElementById("textPoleThree").innerHTML = "Jste zvládl.";
+  } else {
+    document.getElementById("textPoleThree").innerHTML = "Se Vám nepodařil.";
+  }
 }

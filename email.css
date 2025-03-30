@@ -59,6 +59,7 @@ body {
   align-items: center;
   padding-top: 24px;
   height: 100vh;
+  position: relative;
 }
 
 #main {
@@ -561,10 +562,178 @@ strong {
 #StatisticWindow {
   background-color: #fafafa;
   display: none;
-  position: absolute;
-  z-index: 1000;
-  top: 0;
-  left: 0;
+  flex-direction: column;
+  height: 100vh;
   width: 100%;
-  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#StatisticWindow #top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  height: 60px;
+  gap: 24px;
+  background-color: #f0f0f0;
+}
+#StatisticWindow .content {
+  padding: 24px 0;
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+#StatisticWindow .content #img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid #2b2b2b;
+}
+
+#contenTwo {
+  display: none;
+}
+
+#contentTwo {
+  display: none;
+}
+
+#StatisticWindow .content #img img {
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 10px 8px 37px -18px rgba(0, 0, 0, 0.75);
+}
+
+#StatisticWindow #top span {
+  font-size: 1.25rem;
+  color: #2b2b2b;
+}
+
+.navItem {
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  user-select: none;
+}
+
+.navItem:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#navItemOne {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#infoLevel {
+  width: 50%;
+  padding: 280px 0 0 250px;
+}
+
+#infoLevel h1 {
+  font-size: 2rem;
+  color: #2b2b2b;
+}
+
+#infoLevel ul li {
+  font-size: 1rem;
+  color: #2b2b2b;
+  margin-bottom: 32px;
+  margin-top: 8px;
+  margin-left: 32px;
+  width: 50%;
+  line-height: 1.5em;
+}
+
+#levelStatusStytisic {
+  position: absolute;
+  top: 200px;
+  right: 50%; /* Umístí element do poloviny výšky rodiče */
+  left: 50%; /* Umístí element do poloviny šířky rodiče */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Posune element zpět o polovinu jeho vlastní šířky a výšky */
+  width: 180px; /* Příklad šířky */
+  height: 64px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #fafafa;
+  border-radius: 20px;
+  box-sizing: content-box;
+}
+
+#levelStatusStytisic span {
+  color: #fafafa;
+}
+
+#reviewsOfLevels {
+  position: absolute;
+
+  top: 50%; /* Umístí element do poloviny výšky rodiče */
+  left: 50%; /* Umístí element do poloviny šířky rodiče */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Posune element zpět o polovinu jeho vlastní šířky a výšky */
+  width: 180px; /* Příklad šířky */
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #fafafa;
+  border-radius: 20px;
+  box-sizing: content-box;
+  padding: 0 24px;
+}
+
+#reviewsOfLevels div {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.statisicUserManagment {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+}
+
+.levelTitle {
+  font-size: 1.25rem;
+}
+
+#selfEffort {
+  position: absolute;
+  bottom: 10px; /* Umístí element do poloviny výšky rodiče */
+  left: 50%; /* Umístí element do poloviny šířky rodiče */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Posune element zpět o polovinu jeho vlastní šířky a výšky */
+  width: 180px; /* Příklad šířky */
+  height: 48px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #fafafa;
+  border-radius: 20px;
+  box-sizing: content-box;
+  padding: 0 24px;
+}
+
+#selfEffort span a {
+  color: #12b647;
 }
