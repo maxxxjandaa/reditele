@@ -1,3 +1,6 @@
+import { thisisGoodTestEnd } from "/levels.js";
+import { thisiusBadTestEnd } from "/levels.js";
+
 // !Draggable Window maker
 document.querySelectorAll(".draggableWindow").forEach((draggableWindow) => {
   const exitBtn = draggableWindow.querySelector("#close"); // Najde tlačítko uvnitř okna
@@ -99,6 +102,10 @@ export function closeAllWindows() {
   draggableWindow.style.display = "none";
   draggableWindowTwo.style.display = "none";
   draggableWindowThree.style.display = "none";
+  deleting.style.display = "none";
+  errorMessage.style.display = "none";
+  testDiv.style.display = "none";
+  antivirWindow.style.display = "none"; // Skryju antivir window
 }
 
 export function clearEmailBgColor(index) {
@@ -153,15 +160,13 @@ deleteVirBtn.addEventListener("click", () => {
     }
   }, 700); // Pauza 0.7s mezi jednotlivými kroky
 });
-
+const answareOne = document.getElementById("right1");
+const answareTwo = document.getElementById("right2");
+const answareThree = document.getElementById("right3");
+const errorMessage = document.getElementById("errormesage");
+const testDiv = document.getElementById("test");
 const testBtn = document.getElementById("doneBtn");
 testBtn.addEventListener("click", () => {
-  const answareOne = document.getElementById("right1");
-  const answareTwo = document.getElementById("right2");
-  const answareThree = document.getElementById("right3");
-  const errorMessage = document.getElementById("errormesage");
-  const testDiv = document.getElementById("test");
-
   if (answareOne.checked && answareTwo.checked && answareThree.checked) {
     // Počkám 1 sekundu před dokončením loadingu
     setTimeout(() => {
@@ -179,10 +184,14 @@ testBtn.addEventListener("click", () => {
       setTimeout(() => {
         loadingItem.style.width = "100%";
         setTimeout(() => {
-          deleting.style.display = "none"; // Skryju deleting¨
+          thisisGoodTestEnd();
         }, 800);
       }, 1400);
     }, 1000); // Delay před začátkem dokončení loadingu
+  } else {
+    setTimeout(() => {
+      thisiusBadTestEnd();
+    }, 800);
   }
 });
 

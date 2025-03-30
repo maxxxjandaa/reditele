@@ -144,3 +144,20 @@ submitBtnTeams.addEventListener("click", () => {
     );
   }
 });
+
+// ! Level 3
+
+const deleting = document.getElementById("deleting");
+
+export function thisisGoodTestEnd() {
+  goodEndingIcon(3);
+  closeAllWindows();
+  showStatistics();
+}
+
+export function thisiusBadTestEnd() {
+  badEndingIcon(3);
+  decraseMoeny();
+  closeAllWindows();
+  showStatistics();
+}
