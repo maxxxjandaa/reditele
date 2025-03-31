@@ -142,17 +142,6 @@ submitBtnTeams.addEventListener("click", () => {
 
 // ! Level 3
 
-const deleting = document.getElementById("deleting");
-
-export function thisisGoodTestEnd() {
-  goodEndingIcon(3);
-  closeAllWindows();
-  setTimeout(() => {
-    showStatistics();
-  }, 900);
-  globalLevelThreeStatus = true; //GOOD ENDING
-}
-
 export function thisiusBadTestEnd() {
   badEndingIcon(3);
   decraseMoeny();

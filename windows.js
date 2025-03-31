@@ -1,5 +1,5 @@
-import { thisisGoodTestEnd } from "/levels.js";
 import { thisiusBadTestEnd } from "/levels.js";
+
 import { makeEndingText } from "/levels.js";
 
 // !Draggable Window maker
@@ -107,8 +107,6 @@ export function closeAllWindows() {
   draggableWindowTwo.style.display = "none";
   draggableWindowThree.style.display = "none";
   deleting.style.display = "none";
-  errorMessage.style.display = "none";
-  testDiv.style.display = "none";
   antivirWindow.style.display = "none"; // Skryju antivir window
 }
 
@@ -116,9 +114,11 @@ export function clearEmailBgColor(index) {
   if (index === 1) {
     emailOne.style.backgroundColor = "transparent";
     newOne.style.display = "none";
+    emailOne.style.pointerEvents = "none"; // Zakáže další kliky
   } else {
     emailTwo.style.backgroundColor = "transparent";
     newTwo.style.display = "none";
+    emailTwo.style.pointerEvents = "none"; // Zakáže další kliky
   }
 }
 
@@ -128,76 +128,50 @@ const priloha = document.getElementById("priloha");
 priloha.addEventListener("click", () => {
   const antivirWindow = document.getElementById("antivirWindow");
   antivirWindow.style.display = "flex";
+  const reportBtnThree = document.getElementById("reportBtnThree");
+  reportBtnThree.style.pointerEvents = "none"; // Zakáže další kliky
 });
 
 const deleteVirBtn = document.getElementById("deleteVirBtn");
 
-deleteVirBtn.addEventListener("click", () => {
-  const deleting = document.getElementById("deleting");
-  const loadingItem = document.getElementById("loadingItem");
-  const errorMessage = document.getElementById("errormesage");
-  const testDiv = document.getElementById("test");
+if (deleteVirBtn) {
+  deleteVirBtn.addEventListener("click", () => {
+    const deleting = document.getElementById("deleting");
+    const loadingItem = document.getElementById("loadingItem");
 
-  deleting.style.display = "flex";
-
-  const steps = [10, 20, 25, 25]; // Různé kroky pro zvětšování
-  let loadingNumber = 0;
-  let stepIndex = 0; // Index pro kroky
-
-  const interval = setInterval(() => {
-    if (stepIndex < steps.length) {
-      loadingNumber += steps[stepIndex]; // Přidáme aktuální krok
-      stepIndex++; // Přejdeme na další krok
+    if (!deleting || !loadingItem) {
+      console.error("Jeden nebo více prvků nebylo nalezeno!");
+      return;
     }
 
-    // Zvětší šířku loadingItem podle aktuálního čísla
-    loadingItem.style.width = `${loadingNumber}%`;
+    deleting.style.display = "flex";
 
-    // Když dosáhneme 80, zastavíme interval a za 1.5 sekundy ukážeme "Chyba" a test
-    if (loadingNumber >= 80) {
-      clearInterval(interval);
+    const steps = [10, 20, 25, 25, 10, 5, 5]; // Různé kroky pro zvětšování
+    let loadingNumber = 0;
+    let stepIndex = 0; // Index pro kroky
 
-      setTimeout(() => {
-        errorMessage.innerHTML = "Chyba"; // Zobrazí div s chybou
-        testDiv.style.display = "flex"; // Zobrazí div s testem
-      }, 1500);
-    }
-  }, 700); // Pauza 0.7s mezi jednotlivými kroky
-});
-const answareOne = document.getElementById("right1");
-const answareTwo = document.getElementById("right2");
-const answareThree = document.getElementById("right3");
-const errorMessage = document.getElementById("errormesage");
-const testDiv = document.getElementById("test");
-const testBtn = document.getElementById("doneBtn");
-testBtn.addEventListener("click", () => {
-  if (answareOne.checked && answareTwo.checked && answareThree.checked) {
-    // Počkám 1 sekundu před dokončením loadingu
-    setTimeout(() => {
-      // Skryju errorMessage a test
-      errorMessage.style.display = "none";
-      testDiv.style.display = "none";
-      antivirWindow.style.display = "none"; // Skryju antivir window
+    const interval = setInterval(() => {
+      if (stepIndex < steps.length) {
+        loadingNumber += steps[stepIndex]; // Přidáme aktuální krok
+        stepIndex++; // Přejdeme na další krok
+      }
 
-      // Pokračuje loading na 90 %
-      setTimeout(() => {
-        loadingItem.style.width = "90%";
-      }, 700);
+      // Omezíme maximální hodnotu na 100
+      loadingNumber = Math.min(loadingNumber, 100);
 
-      // Dokončení na 100 %
-      setTimeout(() => {
-        loadingItem.style.width = "100%";
+      // Zvětší šířku loadingItem podle aktuálního čísla
+      loadingItem.style.width = `${loadingNumber}%`;
+
+      // Když dosáhneme 100, zastavíme interval a za 1.5 sekundy ukážeme "Chyba" a test
+      if (loadingNumber >= 100) {
         setTimeout(() => {
-          thisisGoodTestEnd();
+          clearInterval(interval); // Zastavíme interval
+          thisiusBadTestEnd();
         }, 800);
-      }, 1400);
-    }, 1000); // Delay před začátkem dokončení loadingu
-  } else {
-    setTimeout(() => {
-      thisiusBadTestEnd();
-    }, 800);
-  }
-});
+      }
+    }, 700); // Pauza 0.7s mezi jednotlivými kroky
+  });
+}
 
 // ! Statistic window
 

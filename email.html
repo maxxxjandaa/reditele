@@ -213,116 +213,7 @@
       </div>
     </div>
     <!-- !Antivir -->
-    <div id="test">
-      <h3>Aby se virus odstranil, musíte odpovědět správně na tyto otázky.</h3>
-      <div id="testContetn">
-        <div class="questionWrapper">
-          <span class="question">
-            1. Jaká je první věc, která by vás měla varovat při obdržení e-mailu
-            s odkazem na aktualizaci účtu?</span
-          >
-          <div class="questionContent">
-            <div class="answareItemWrapper">
-              <input
-                type="radio"
-                onclick="CheckIt(1)"
-                name="name"
-                id="right1"
-              /><label for="">A: E-mail obsahuje neosobní oslovení.</label>
-            </div>
-            <div class="answareItemWrapper">
-              <input type="radio" onclick="CheckIt(2)" name="name" /><label
-                for=""
-                id="goodAsnware1Visible"
-                >B: E-mail má správnou gramatiku a je podepsán jménem.</label
-              >
-            </div>
-            <div class="answareItemWrapper">
-              <input type="radio" onclick="CheckIt(3)" name="name" /><label
-                for=""
-                >C: Odkaz vede na známou webovou stránku banky.</label
-              >
-            </div>
-          </div>
-          <span class="goodAsnware1"></span>
-        </div>
-        <hr />
-        <div class="questionWrapper">
-          <span class="question">
-            2. Jaký znak obvykle naznačuje phishingovou webovou stránku?</span
-          >
-          <div class="questionContent">
-            <div class="answareItemWrapper">
-              <input
-                type="radio"
-                onclick="CheckIt(4)"
-                name="name2"
-                id="goodAsnware2Visible"
-              /><label for=""
-                >A: URL adresa začíná "https://" a má zámek.</label
-              >
-            </div>
-            <div class="answareItemWrapper">
-              <input
-                type="radio"
-                onclick="CheckIt(5)"
-                name="name2"
-                id="right2"
-              /><label for=""
-                >B: URL adresa obsahuje gramatické chyby nebo neobvyklé
-                znaky.</label
-              >
-            </div>
-            <div class="answareItemWrapper">
-              <input type="radio" onclick="CheckIt(6)" name="name2" /><label
-                for=""
-                id="goodAsnware3Visible"
-                >C: URL adresa je stejná jako oficiální webová stránka.</label
-              >
-            </div>
-          </div>
 
-          <span class="goodAsnware2"></span>
-        </div>
-        <hr />
-        <div class="questionWrapper">
-          <span class="question"
-            >3. Jak se můžete bránit phishingovým e-mailům?</span
-          >
-          <div class="questionContent">
-            <div class="answareItemWrapper">
-              <input type="radio" onclick="CheckIt(7)" name="name3" /><label
-                for=""
-                >A: Klikněte na všechny odkazy v e-mailech, abyste zjistili, co
-                se děje.</label
-              >
-            </div>
-            <div class="answareItemWrapper">
-              <input type="radio" onclick="CheckIt(8)" name="name3" /><label
-                for=""
-                >B: Požádejte příjemce e-mailu, aby vám znovu poslal
-                odkaz.</label
-              >
-            </div>
-            <div class="answareItemWrapper">
-              <input
-                type="radio"
-                onclick="CheckIt(9)"
-                name="name3"
-                id="right3"
-              /><label for=""
-                >C: Nikdy neklikejte na odkazy v podezřelých e-mailech a
-                neotevírejte přílohy.</label
-              >
-            </div>
-          </div>
-
-          <span class="goodAsnware3"></span>
-        </div>
-        <hr />
-        <button id="doneBtn">Hotovo</button>
-      </div>
-    </div>
     <div id="deleting">
       <h2>Mazání viru...</h2>
       <span id="errormesage"></span>
@@ -354,7 +245,7 @@
       <form>
         <input
           type="email"
-          placeholder="E-mail"
+          placeholder="Uživatelské jmeno"
           id="emailInputLevel2"
           required
         />
@@ -602,7 +493,7 @@
           <form>
             <input
               type="email"
-              placeholder="E-mail"
+              placeholder="Uživatelské jmeno"
               id="emailInputLevel1"
               required
             />
