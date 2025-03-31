@@ -127,7 +127,7 @@ function generateRandomData() {
     firstNames[Math.floor(Math.random() * firstNames.length)];
   const randomLastName =
     lastNames[Math.floor(Math.random() * lastNames.length)];
-  window.glovalRandomEmail =
+  window.globalRandomEmail =
     removeDiacritics(
       randomFirstName.toLowerCase() + randomLastName.toLowerCase()
     ) + domains[Math.floor(Math.random() * domains.length)];
@@ -140,7 +140,7 @@ function generateRandomData() {
   document.getElementById("name").innerHTML = "Jmeno: " + randomFirstName;
   document.getElementById("surname").innerHTML = "Prijmeni: " + randomLastName;
   document.getElementById("email").innerHTML =
-    "Email: " + window.glovalRandomEmail;
+    "Email: " + window.globalRandomEmail;
   document.getElementById("password").innerHTML =
     "Heslo: " + window.globalRandomPassword;
   document.getElementById("cislo_uctu").innerHTML = randomAccount;
@@ -193,17 +193,18 @@ export function goodEndingIcon(element) {
   goodEndWindow.style.display = "flex";
   setTimeout(function () {
     goodEndWindow.style.display = "none";
-  }, 700);
+  }, 900);
 }
 
 export function badEndingIcon(element) {
+  console.log(element);
   const iconfalse = document.getElementById("iconfalse" + element);
   const badEndWindow = document.getElementById("badEndWindow");
   iconfalse.style.display = "block";
   badEndWindow.style.display = "flex";
   setTimeout(function () {
     badEndWindow.style.display = "none";
-  }, 700);
+  }, 900);
 }
 
 // const levelOneSubmitBtn = document.getElementById("submitBtn");

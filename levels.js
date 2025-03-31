@@ -14,8 +14,6 @@ let globalLevelControler = 0;
 
 // !Good/Bad ending handler
 
-let globalEndingStatus = null;
-
 // True == Level is Good-ending
 // False == Level is Bad-ending
 // null == Level is not finished
@@ -84,8 +82,10 @@ reportButtonThree.addEventListener("click", () => {
     globalLevelControler = 4;
     globalLevelThreeStatus = true; //GOOD ENDING
     goodEndingIcon(3);
-    showStatistics();
     closeAllWindows();
+    setTimeout(() => {
+      showStatistics();
+    }, 900);
   }
 });
 
@@ -96,22 +96,22 @@ submitBtn.addEventListener("click", () => {
   const emailInputLevel1 = document.getElementById("emailInputLevel1");
   const passwordInputLevel1 = document.getElementById("passwordInputLevel1");
   if (
-    // emailInputLevel1.value === window.glovalRandomEmail &&
-    // passwordInputLevel1.value === window.globalRandomPassword
-    emailInputLevel1.value === "ahoj" &&
-    passwordInputLevel1.value === "ahoj"
+    emailInputLevel1.value === window.globalRandomEmail &&
+    passwordInputLevel1.value === window.globalRandomPassword
+    // emailInputLevel1.value === "ahoj" &&
+    // passwordInputLevel1.value === "ahoj"
   ) {
     globalLevelControler = 2;
     globalLevelOneStatus = false; //BAD ENDING
+    console.log(globalLevelControler);
     FillLevelTwo();
     badEndingIcon(1);
     decraseMoeny();
     closeAllWindows();
     clearEmailBgColor(1);
   } else {
-    alert(
-      "Informace mimo hru – Zadali jste špatné údaje! Musíte zadat uživatelské jméno a heslo, které najdete ve vašich údajích vpravo dole!"
-    );
+    emailInputLevel1.value = "";
+    passwordInputLevel1.value = "";
   }
 });
 
@@ -133,15 +133,14 @@ submitBtnTeams.addEventListener("click", () => {
     passwordInputLevel2.value === "ahoj"
   ) {
     globalLevelControler = 3;
-    globalLevelTwoStatus = true; //BAD ENDING
+    globalLevelTwoStatus = true; //GOOD ENDING
     FillLevelThree();
     goodEndingIcon(2);
     closeAllWindows();
     clearEmailBgColor(2);
   } else {
-    alert(
-      "Informace mimo hru – Zadali jste špatné údaje! Musíte zadat uživatelské jméno a heslo, které najdete ve vašich údajích vpravo dole!"
-    );
+    emailInputLevel1.value = "";
+    passwordInputLevel1.value = "";
   }
 });
 
@@ -152,7 +151,9 @@ const deleting = document.getElementById("deleting");
 export function thisisGoodTestEnd() {
   goodEndingIcon(3);
   closeAllWindows();
-  showStatistics();
+  setTimeout(() => {
+    showStatistics();
+  }, 900);
   globalLevelThreeStatus = true; //GOOD ENDING
 }
 
@@ -160,7 +161,9 @@ export function thisiusBadTestEnd() {
   badEndingIcon(3);
   decraseMoeny();
   closeAllWindows();
-  showStatistics();
+  setTimeout(() => {
+    showStatistics();
+  }, 900);
   globalLevelThreeStatus = false; //BAD ENDING
 }
 
