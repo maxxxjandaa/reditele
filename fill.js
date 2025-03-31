@@ -96,13 +96,6 @@ const numAccoutn = [
   "9012345678/0800",
 ];
 
-const domains = [
-  "@gmail.com",
-  "@seznam.cz",
-  "@outlook.com",
-  "@yahoo.com",
-  "@hotmail.com",
-];
 const passwords = [
   "heslo123",
   "totojeheslo",
@@ -118,7 +111,10 @@ const passwords = [
 
 // Funkce pro odstranění diakritiky
 function removeDiacritics(str) {
-  return str.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+  return str
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/[^a-zA-Z0-9]/g, "");
 }
 
 // Funkce pro generování náhodných hodnot a přiřazení do elementů
@@ -127,10 +123,10 @@ function generateRandomData() {
     firstNames[Math.floor(Math.random() * firstNames.length)];
   const randomLastName =
     lastNames[Math.floor(Math.random() * lastNames.length)];
-  window.globalRandomEmail =
-    removeDiacritics(
-      randomFirstName.toLowerCase() + randomLastName.toLowerCase()
-    ) + domains[Math.floor(Math.random() * domains.length)];
+
+  window.globalRandomUsername = removeDiacritics(
+    randomFirstName.toLowerCase() + randomLastName.toLowerCase()
+  );
   window.globalRandomPassword =
     passwords[Math.floor(Math.random() * passwords.length)];
   const randomAccount =
@@ -139,8 +135,8 @@ function generateRandomData() {
   // Použití innerHTML pro zobrazení hodnot v HTML
   document.getElementById("name").innerHTML = "Jmeno: " + randomFirstName;
   document.getElementById("surname").innerHTML = "Prijmeni: " + randomLastName;
-  document.getElementById("email").innerHTML =
-    "Email: " + window.globalRandomEmail;
+  document.getElementById("username").innerHTML =
+    "Uzivatelske jmeno: " + window.globalRandomUsername;
   document.getElementById("password").innerHTML =
     "Heslo: " + window.globalRandomPassword;
   document.getElementById("cislo_uctu").innerHTML = randomAccount;

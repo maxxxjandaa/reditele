@@ -96,10 +96,8 @@ submitBtn.addEventListener("click", () => {
   const emailInputLevel1 = document.getElementById("emailInputLevel1");
   const passwordInputLevel1 = document.getElementById("passwordInputLevel1");
   if (
-    emailInputLevel1.value === window.globalRandomEmail &&
+    emailInputLevel1.value === window.globalRandomUsername &&
     passwordInputLevel1.value === window.globalRandomPassword
-    // emailInputLevel1.value === "ahoj" &&
-    // passwordInputLevel1.value === "ahoj"
   ) {
     globalLevelControler = 2;
     globalLevelOneStatus = false; //BAD ENDING
@@ -127,10 +125,8 @@ submitBtnTeams.addEventListener("click", () => {
   const emailInputLevel2 = document.getElementById("emailInputLevel2");
   const passwordInputLevel2 = document.getElementById("passwordInputLevel2");
   if (
-    // emailInputLevel1.value === window.glovalRandomEmail &&
-    // passwordInputLevel1.value === window.globalRandomPassword
-    emailInputLevel2.value === "ahoj" &&
-    passwordInputLevel2.value === "ahoj"
+    emailInputLevel1.value === window.globalRandomUsername &&
+    passwordInputLevel1.value === window.globalRandomPassword
   ) {
     globalLevelControler = 3;
     globalLevelTwoStatus = true; //GOOD ENDING
